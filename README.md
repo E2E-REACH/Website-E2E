@@ -12,6 +12,10 @@ The page is conversion-focused and leads with the **Champion** story (primary
 audience: prospective Well-being Champions), with dedicated sections lower down
 for **sector partners** and **impact funders**.
 
+This is the official marketing website for e2E — a standalone public landing
+page presenting the brand, its offerings, and current market presence. It is
+independent of the e2E platform and core services.
+
 ---
 
 ## Tech stack
