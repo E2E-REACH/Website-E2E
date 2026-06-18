@@ -5,18 +5,50 @@ import {
   Sun,
   ScrollText,
   BookOpen,
-  ArrowUpRight,
 } from "lucide-react";
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
+import { cn } from "@/lib/utils";
 
 const sectors = [
-  { icon: HeartPulse, title: "Healthcare", body: "Telehealth consults, diagnostics and follow-ups, at the doorstep." },
-  { icon: Landmark, title: "Financial services & literacy", body: "Savings, credit, insurance — and the literacy to use them well." },
-  { icon: Wrench, title: "Household services", body: "Everyday services, coordinated and fulfilled through one person." },
-  { icon: Sun, title: "Renewable energy", body: "Clean-energy products like solar — sold, installed, supported locally." },
-  { icon: ScrollText, title: "Government schemes & entitlements", body: "Eligibility checks and applications, so benefits actually arrive." },
-  { icon: BookOpen, title: "Awareness & education", body: "Camps and sessions that build knowledge, confidence and uptake." },
+  {
+    icon: HeartPulse,
+    title: "Healthcare",
+    body: "Telehealth consults, diagnostics and follow-ups, brought to the doorstep — care that used to mean a day's travel.",
+    span: "sm:col-span-2 lg:col-span-2",
+    feature: true,
+  },
+  {
+    icon: Landmark,
+    title: "Financial services & literacy",
+    body: "Savings, credit, insurance — and the literacy to use them well.",
+    span: "lg:col-span-1",
+  },
+  {
+    icon: Wrench,
+    title: "Household services",
+    body: "Everyday services, coordinated and fulfilled through one trusted person.",
+    span: "lg:col-span-1",
+  },
+  {
+    icon: Sun,
+    title: "Renewable energy",
+    body: "Clean-energy products like solar — sold, installed and supported locally.",
+    span: "lg:col-span-1",
+  },
+  {
+    icon: BookOpen,
+    title: "Awareness & education",
+    body: "Camps and sessions that build knowledge, confidence and uptake.",
+    span: "lg:col-span-1",
+  },
+  {
+    icon: ScrollText,
+    title: "Government schemes & entitlements",
+    body: "Eligibility checks and applications, so the benefits people are owed actually reach them.",
+    span: "sm:col-span-2 lg:col-span-2",
+    feature: true,
+  },
 ];
 
 export function Sectors() {
@@ -43,35 +75,58 @@ export function Sectors() {
         </div>
       </div>
 
-      <Stagger as="ul" className="mt-16 border-t border-ink/15">
-        {sectors.map((s, i) => {
+      <Stagger
+        as="ul"
+        className="mt-16 grid auto-rows-[minmax(11rem,1fr)] grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"
+        amount={0.08}
+      >
+        {sectors.map((s) => {
           const Icon = s.icon;
           return (
             <StaggerItem
               key={s.title}
               as="li"
-              className="group grid grid-cols-[auto_1fr_auto] items-center gap-x-5 border-b border-ink/10 py-6 transition-colors sm:gap-x-8"
+              className={cn(
+                "group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-paper p-6 ring-1 ring-ink/10 transition-all duration-300 hover:ring-ink/25",
+                s.span,
+                s.feature && "bg-ground-soft/40",
+              )}
             >
-              <span className="flex items-center gap-4 sm:gap-6">
-                <span className="font-mono text-xs tabular-nums text-ink-soft/50">
-                  0{i + 1}
-                </span>
-                <span className="flex size-11 items-center justify-center rounded-full bg-ground-soft text-ground transition-colors group-hover:bg-ground group-hover:text-paper">
-                  <Icon className="size-5" aria-hidden />
-                </span>
+              {/* hover spotlight */}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                style={{
+                  background:
+                    "radial-gradient(circle, var(--marigold) 0%, transparent 70%)",
+                }}
+              />
+              <span
+                className={cn(
+                  "relative flex items-center justify-center rounded-full bg-ground text-paper transition-colors group-hover:bg-marigold group-hover:text-ink",
+                  s.feature ? "size-14" : "size-12",
+                )}
+              >
+                <Icon className={s.feature ? "size-6" : "size-5"} aria-hidden />
               </span>
-              <span className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-6">
-                <h3 className="font-display text-xl font-medium text-ink sm:text-2xl">
+              <div className="relative mt-6">
+                <h3
+                  className={cn(
+                    "font-display font-medium text-ink",
+                    s.feature ? "text-2xl sm:text-3xl" : "text-xl",
+                  )}
+                >
                   {s.title}
                 </h3>
-                <span className="max-w-md text-sm leading-relaxed text-ink-soft">
+                <p
+                  className={cn(
+                    "mt-2 leading-relaxed text-ink-soft",
+                    s.feature ? "max-w-md text-base" : "text-sm",
+                  )}
+                >
                   {s.body}
-                </span>
-              </span>
-              <ArrowUpRight
-                className="size-5 text-ink-soft/40 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-marigold-ink"
-                aria-hidden
-              />
+                </p>
+              </div>
             </StaggerItem>
           );
         })}

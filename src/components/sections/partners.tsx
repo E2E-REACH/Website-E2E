@@ -10,19 +10,9 @@ const points = [
   { icon: ShieldCheck, title: "Trust, built in", body: "Your offer arrives through someone the community already relies on — so uptake follows." },
 ];
 
-const ticker = [
-  "Banking",
-  "Insurance",
-  "Telehealth",
-  "Solar & clean energy",
-  "Government schemes",
-  "Financial literacy",
-  "Household services",
-];
-
 export function Partners() {
   return (
-    <Section id="partners" tone="ground" className="overflow-clip">
+    <Section id="partners" tone="ground">
       <div className="grid grid-cols-1 gap-x-12 gap-y-12 lg:grid-cols-12">
         <div className="lg:col-span-6">
           <Reveal>
@@ -74,24 +64,6 @@ export function Partners() {
               );
             })}
           </Stagger>
-        </div>
-      </div>
-
-      {/* Sector marquee — categories we carry (not partner names) */}
-      <div
-        className="relative mt-16 flex select-none overflow-hidden border-y border-paper/12 py-5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
-        aria-hidden
-      >
-        <div className="flex shrink-0 items-center gap-10 pr-10 [animation:marquee_32s_linear_infinite]">
-          {[...ticker, ...ticker].map((t, i) => (
-            <span
-              key={i}
-              className="flex items-center gap-10 whitespace-nowrap font-display text-xl text-paper/40 italic"
-            >
-              {t}
-              <span className="size-1.5 rounded-full bg-marigold/60" />
-            </span>
-          ))}
         </div>
       </div>
     </Section>

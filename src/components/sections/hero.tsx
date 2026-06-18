@@ -1,8 +1,9 @@
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { CtaButton } from "@/components/ui/cta-button";
-import { TrustNetwork } from "@/components/trust-network";
-import { Reveal, RevealMask, Parallax } from "@/components/ui/reveal";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { MovingGlow } from "@/components/ui/moving-glow";
+import { Reveal, RevealMask } from "@/components/ui/reveal";
 import { Em } from "@/components/ui/section";
 
 export function Hero() {
@@ -19,17 +20,8 @@ export function Hero() {
             "radial-gradient(130% 100% at 82% 12%, var(--ground-light) 0%, var(--ground) 46%, var(--ground-deep) 100%)",
         }}
       />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-node-grid opacity-40" />
-
-      {/* Network — bleeds in from the right on large screens for depth */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-[42%] -z-[5] mx-auto h-[60vh] w-full max-w-[34rem] opacity-90 sm:max-w-[40rem] lg:inset-y-0 lg:left-auto lg:right-[-6%] lg:top-0 lg:my-auto lg:h-full lg:w-[58%] lg:max-w-none lg:opacity-100"
-      >
-        <Parallax speed={0.18} className="h-full w-full">
-          <TrustNetwork className="h-full w-full" />
-        </Parallax>
-      </div>
+      <AuroraBackground className="-z-[8]" />
+      <div aria-hidden className="absolute inset-0 -z-[7] bg-node-grid opacity-30" />
 
       <div className="mx-auto flex w-full max-w-[88rem] flex-1 flex-col justify-center px-5 pt-28 pb-12 sm:px-8 lg:pt-32">
         <Reveal>
@@ -58,10 +50,12 @@ export function Hero() {
 
         <Reveal delay={0.4}>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <CtaButton href={siteConfig.ctaPrimary.href}>
-              {siteConfig.ctaPrimary.label}
-              <ArrowUpRight aria-hidden />
-            </CtaButton>
+            <MovingGlow>
+              <CtaButton href={siteConfig.ctaPrimary.href} className="w-full">
+                {siteConfig.ctaPrimary.label}
+                <ArrowUpRight aria-hidden />
+              </CtaButton>
+            </MovingGlow>
             <CtaButton href={siteConfig.ctaSecondary.href} variant="ghost-light">
               {siteConfig.ctaSecondary.label}
             </CtaButton>

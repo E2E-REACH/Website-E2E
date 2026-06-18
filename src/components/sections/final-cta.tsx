@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealMask } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
+import { MovingGlow } from "@/components/ui/moving-glow";
 import { Em } from "@/components/ui/section";
 import { siteConfig } from "@/lib/site";
 
@@ -47,10 +48,12 @@ export function FinalCta() {
 
         <Reveal delay={0.4}>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <CtaButton href={siteConfig.ctaPrimary.href}>
-              {siteConfig.ctaPrimary.label}
-              <ArrowUpRight aria-hidden />
-            </CtaButton>
+            <MovingGlow>
+              <CtaButton href={siteConfig.ctaPrimary.href} className="w-full">
+                {siteConfig.ctaPrimary.label}
+                <ArrowUpRight aria-hidden />
+              </CtaButton>
+            </MovingGlow>
             <CtaButton href={siteConfig.ctaSecondary.href} variant="ghost-light">
               {siteConfig.ctaSecondary.label}
             </CtaButton>

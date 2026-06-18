@@ -229,3 +229,39 @@
     stroke-dashoffset: 0;
   }
 }
+
+/* Aurora background drift (Aceternity-style) */
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10%, 8%, 0) scale(1.25);
+  }
+}
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate3d(8%, 6%, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-10%, -8%, 0) scale(0.9);
+  }
+}
+@keyframes aurora-c {
+  0%,
+  100% {
+    transform: translate3d(0, 4%, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(6%, -6%, 0) scale(1.2);
+  }
+}
+
+/* Moving border glow (Aceternity-style) */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
