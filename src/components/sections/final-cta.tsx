@@ -1,45 +1,55 @@
-import { ArrowRight } from "lucide-react";
-import { Reveal } from "@/components/ui/reveal";
+import { ArrowUpRight } from "lucide-react";
+import { Reveal, RevealMask } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
+import { Em } from "@/components/ui/section";
 import { siteConfig } from "@/lib/site";
 
 export function FinalCta() {
   return (
     <section
       id="become"
-      className="relative isolate scroll-mt-20 overflow-x-clip bg-ground px-5 py-24 text-paper sm:px-8 sm:py-32"
+      className="relative isolate scroll-mt-24 overflow-clip bg-ground-deep px-5 py-28 text-paper sm:px-8 sm:py-40"
     >
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(110% 120% at 50% 0%, var(--ground-light) 0%, var(--ground) 45%, var(--ground-deep) 100%)",
+            "radial-gradient(120% 130% at 50% 0%, var(--ground-light) 0%, var(--ground) 42%, var(--ground-deep) 100%)",
         }}
       />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-node-grid opacity-40" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-node-grid opacity-30" />
 
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="mx-auto max-w-[80rem]">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.12em] text-marigold">
-            e-commerce → Ecosystem
+          <p className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-paper/60">
+            <span className="text-marigold">e-commerce</span>
+            <span className="h-px w-10 bg-paper/30" aria-hidden />
+            Ecosystem
           </p>
-          <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl">
-            Your community already trusts you.{" "}
-            <span className="text-marigold">Turn that trust into a livelihood.</span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-paper/80 text-pretty">
+        </Reveal>
+
+        <h2 className="font-display mt-8 max-w-[18ch] text-[clamp(2.6rem,8vw,6.4rem)] font-medium leading-[0.98] text-balance">
+          <RevealMask delay={0.05}>Your community</RevealMask>
+          <RevealMask delay={0.12}>already trusts you.</RevealMask>
+          <RevealMask delay={0.2} className="text-marigold">
+            <Em>Turn it into a livelihood.</Em>
+          </RevealMask>
+        </h2>
+
+        <Reveal delay={0.3}>
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-paper/80 text-pretty">
             Become a Well-being Champion — bring essential services to your
             neighbours&apos; doorstep, earn a real income, and grow into a
             business of your own.
           </p>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <Reveal delay={0.4}>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaButton href={siteConfig.ctaPrimary.href}>
               {siteConfig.ctaPrimary.label}
-              <ArrowRight aria-hidden />
+              <ArrowUpRight aria-hidden />
             </CtaButton>
             <CtaButton href={siteConfig.ctaSecondary.href} variant="ghost-light">
               {siteConfig.ctaSecondary.label}

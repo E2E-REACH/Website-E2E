@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk, Space_Mono } from "next/font/google";
+import { Fraunces, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
+import "lenis/dist/lenis.css";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
+import { Grain } from "@/components/ui/grain";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const hanken = Hanken_Grotesk({
@@ -37,9 +41,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${hanken.variable} ${spaceMono.variable} h-full`}
+      className={`${fraunces.variable} ${hanken.variable} ${spaceMono.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Grain />
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }

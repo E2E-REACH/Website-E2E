@@ -1,6 +1,6 @@
-import { Building2, Boxes, HeartHandshake, Home, ArrowRight, ArrowDown } from "lucide-react";
-import { Section, Eyebrow, SectionHeading, Lead } from "@/components/ui/section";
-import { Reveal } from "@/components/ui/reveal";
+import { Building2, Boxes, HeartHandshake, Home } from "lucide-react";
+import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 const actors = [
@@ -8,13 +8,13 @@ const actors = [
     num: "01",
     icon: Building2,
     title: "Sector partners",
-    body: "Formal services — banks, insurers, telehealth, solar, government schemes — that want to reach the last mile.",
+    body: "Formal services — banks, insurers, telehealth, solar, government — that want to reach the last mile.",
   },
   {
     num: "02",
     icon: Boxes,
     title: "e2E platform",
-    body: "The rails: tools, training, payments and quality — turning many services into one simple offer.",
+    body: "The rails: tools, training, payments and quality, turning many services into one simple offer.",
   },
   {
     num: "03",
@@ -33,97 +33,86 @@ const actors = [
 
 export function HowItWorks() {
   return (
-    <Section id="how-it-works" tone="paper-dim">
-      <Reveal>
-        <Eyebrow>How it works</Eyebrow>
-        <SectionHeading>One trusted person, carrying many services.</SectionHeading>
-        <Lead>
-          Value moves left to right — from formal sectors, through our platform,
-          to a Champion, and out to the community. The Champion is the part
-          nobody else can build.
-        </Lead>
-      </Reveal>
+    <Section id="how-it-works" tone="paper">
+      <div className="grid grid-cols-1 items-end gap-x-10 gap-y-6 lg:grid-cols-12">
+        <div className="lg:col-span-8">
+          <Reveal>
+            <Kicker index="02">The model</Kicker>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <Display as="h2" size="lg" className="mt-7">
+              One trusted person, <Em>carrying many services.</Em>
+            </Display>
+          </Reveal>
+        </div>
+        <div className="lg:col-span-4">
+          <Reveal delay={0.1}>
+            <Lead className="text-base sm:text-lg">
+              Value moves left to right — from formal sectors, through our
+              platform, to a Champion, and out to the community.
+            </Lead>
+          </Reveal>
+        </div>
+      </div>
 
-      {/* Flow: horizontal on lg, vertical stack on mobile */}
-      <Reveal delay={0.1}>
-        <ol className="mt-14 flex flex-col gap-3 lg:flex-row lg:items-stretch lg:gap-0">
-          {actors.map((a, i) => {
-            const Icon = a.icon;
-            const last = i === actors.length - 1;
-            return (
-              <li
-                key={a.num}
-                className="flex flex-col items-stretch lg:flex-1 lg:flex-row lg:items-center"
-              >
-                <div
+      <Stagger className="mt-16 grid grid-cols-1 border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-4">
+        {actors.map((a) => {
+          const Icon = a.icon;
+          return (
+            <StaggerItem
+              key={a.num}
+              className={cn(
+                "relative flex flex-col gap-5 border-b border-ink/10 px-0 py-8 sm:px-7 sm:[&:nth-child(odd)]:pl-0 lg:border-b-0 lg:border-r lg:border-ink/10 lg:px-7 lg:first:pl-0 lg:last:border-r-0",
+                a.highlight && "lg:bg-ground/[0.03]",
+              )}
+            >
+              {/* top accent for the Champion */}
+              {a.highlight && (
+                <span className="absolute left-0 top-[-1px] h-[2px] w-full bg-marigold lg:left-7 lg:w-[calc(100%-3.5rem)]" aria-hidden />
+              )}
+              <div className="flex items-center justify-between">
+                <span
                   className={cn(
-                    "relative flex flex-1 flex-col rounded-2xl p-6 ring-1 transition-colors",
-                    a.highlight
-                      ? "bg-ground text-paper ring-ground shadow-lg shadow-ground/15 lg:scale-[1.04]"
-                      : "bg-paper text-ink ring-line",
+                    "flex size-12 items-center justify-center rounded-full",
+                    a.highlight ? "bg-marigold text-ink" : "bg-ground-soft text-ground",
                   )}
                 >
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={cn(
-                        "flex size-11 items-center justify-center rounded-xl",
-                        a.highlight ? "bg-marigold text-ink" : "bg-ground-soft text-ground",
-                      )}
-                    >
-                      <Icon className="size-5" aria-hidden />
-                    </span>
-                    <span
-                      className={cn(
-                        "font-mono text-xs tabular-nums",
-                        a.highlight ? "text-marigold" : "text-ink-soft/60",
-                      )}
-                    >
-                      {a.num}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 font-display text-lg font-bold">{a.title}</h3>
-                  <p
-                    className={cn(
-                      "mt-1.5 text-sm leading-relaxed",
-                      a.highlight ? "text-paper/80" : "text-ink-soft",
-                    )}
-                  >
-                    {a.body}
-                  </p>
-                  {a.highlight && (
-                    <span className="mt-3 inline-flex w-fit rounded-full bg-paper/10 px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wide text-marigold">
-                      The heart of it
-                    </span>
-                  )}
-                </div>
-
-                {/* Connector */}
-                {!last && (
-                  <span
-                    aria-hidden
-                    className="flex shrink-0 items-center justify-center self-center py-1 text-ground/40 lg:px-1 lg:py-0"
-                  >
-                    <ArrowDown className="size-5 lg:hidden" />
-                    <ArrowRight className="hidden size-5 lg:block" />
+                  <Icon className="size-5" aria-hidden />
+                </span>
+                <span className="font-mono text-sm tabular-nums text-ink-soft/50">
+                  {a.num}
+                </span>
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-medium text-ink">
+                  {a.title}
+                </h3>
+                {a.highlight && (
+                  <span className="mt-1 block font-mono text-[0.65rem] uppercase tracking-[0.18em] text-marigold-ink">
+                    the heart of it
                   </span>
                 )}
-              </li>
-            );
-          })}
-        </ol>
-      </Reveal>
+                <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">
+                  {a.body}
+                </p>
+              </div>
+            </StaggerItem>
+          );
+        })}
+      </Stagger>
 
-      {/* Principle bar */}
-      <Reveal delay={0.15}>
-        <div className="mt-8 flex flex-col items-start gap-2 rounded-2xl border border-marigold/40 bg-marigold-soft/50 px-6 py-5 sm:flex-row sm:items-center sm:gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-marigold-ink">
+      {/* Principle — as a large editorial statement */}
+      <Reveal delay={0.1}>
+        <figure className="mt-16 border-t border-ink/15 pt-10">
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-marigold-ink">
             The principle
-          </span>
-          <p className="text-base font-semibold text-ink sm:text-lg">
-            Income flows back to Champions — who keep the maximum possible share
-            of the value the platform generates.
           </p>
-        </div>
+          <blockquote className="mt-5 max-w-4xl font-display text-2xl font-medium leading-[1.2] text-ink text-balance sm:text-3xl lg:text-4xl">
+            Income flows back to Champions — who keep the{" "}
+            <Em className="text-marigold-ink">maximum possible share</Em> of the
+            value the platform generates.
+          </blockquote>
+        </figure>
       </Reveal>
     </Section>
   );

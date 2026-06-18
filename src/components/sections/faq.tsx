@@ -1,4 +1,4 @@
-import { Section, Eyebrow, SectionHeading } from "@/components/ui/section";
+import { Section, Kicker, Display, Em } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import {
   Accordion,
@@ -37,37 +37,44 @@ const faqs = [
 export function Faq() {
   return (
     <Section id="faq" tone="paper">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <Reveal>
-          <Eyebrow>FAQ</Eyebrow>
-          <SectionHeading>Questions Champions ask us.</SectionHeading>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
-            Don&apos;t see your question? Reach out — we&apos;d rather you ask
-            than wonder.
-          </p>
-        </Reveal>
+      <div className="grid grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-12">
+        <div className="lg:col-span-4">
+          <Reveal>
+            <Kicker>Questions</Kicker>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <Display as="h2" size="md" className="mt-7">
+              Things Champions <Em>ask us.</Em>
+            </Display>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-6 max-w-xs text-base leading-relaxed text-ink-soft">
+              Don&apos;t see your question? Reach out — we&apos;d rather you ask
+              than wonder.
+            </p>
+          </Reveal>
+        </div>
 
-        <Reveal delay={0.1}>
-          <Accordion
-            multiple={false}
-            className="rounded-2xl bg-paper px-5 ring-1 ring-line sm:px-6"
-          >
-            {faqs.map((item, i) => (
-              <AccordionItem
-                key={item.q}
-                value={`faq-${i}`}
-                className="border-line"
-              >
-                <AccordionTrigger className="py-5 font-display text-base font-semibold text-ink hover:no-underline sm:text-lg">
-                  {item.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-base leading-relaxed text-ink-soft">
-                  {item.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Reveal>
+        <div className="lg:col-span-8">
+          <Reveal delay={0.05}>
+            <Accordion multiple={false} className="border-t border-ink/15">
+              {faqs.map((item, i) => (
+                <AccordionItem
+                  key={item.q}
+                  value={`faq-${i}`}
+                  className="border-b border-ink/10"
+                >
+                  <AccordionTrigger className="gap-6 py-6 font-display text-xl font-medium text-ink hover:no-underline data-[panel-open]:text-marigold-ink sm:text-2xl">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="max-w-2xl pb-6 text-base leading-relaxed text-ink-soft">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Reveal>
+        </div>
       </div>
     </Section>
   );

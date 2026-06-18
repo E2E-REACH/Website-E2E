@@ -1,50 +1,67 @@
-import { Section, Eyebrow, SectionHeading, Lead } from "@/components/ui/section";
-import { Reveal } from "@/components/ui/reveal";
+import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 
 // TODO: replace placeholder stats with real, cited figures before launch.
 const stats = [
-  { value: "[PLACEHOLDER]", label: "people in underserved & rural communities" },
-  { value: "[PLACEHOLDER]", label: "without reliable access to essential services" },
-  { value: "[PLACEHOLDER]", label: "single-purpose agents needed to cover one village" },
+  { value: "[—]", label: "people in underserved & rural communities" },
+  { value: "[—]", label: "without reliable access to essential services" },
+  { value: "[—]", label: "agents it takes to cover one village, the old way" },
 ];
 
 export function TheGap() {
   return (
     <Section id="the-gap" tone="paper">
-      <Reveal>
-        <Eyebrow>The gap</Eyebrow>
-        <SectionHeading>
-          The services exist. The trust to deliver them doesn&apos;t reach the
-          last mile.
-        </SectionHeading>
-        <Lead>
-          Banks, insurers, solar companies, telehealth providers and government
-          schemes all want to serve rural and underserved communities — but none
-          of them can economically build the final human layer that makes it
-          work. Underserved markets don&apos;t fail for lack of products. They
-          fail for lack of trusted last-mile distribution and fulfilment.
-        </Lead>
-        <p className="mt-4 max-w-xl text-lg font-medium text-ink">
-          e2E Reach <span className="text-marigold-ink">is</span> that layer.
-        </p>
-      </Reveal>
+      <div className="grid grid-cols-1 gap-x-10 gap-y-8 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <Reveal>
+            <Kicker index="01">The reality</Kicker>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <Display as="h2" size="lg" className="mt-7">
+              The services exist. The trust to deliver them{" "}
+              <Em className="text-marigold-ink">doesn&apos;t</Em> reach the last
+              mile.
+            </Display>
+          </Reveal>
+        </div>
 
-      {/* Quiet stat row — placeholders until real data is available */}
-      <Reveal delay={0.1}>
-        <dl className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-line ring-1 ring-line sm:grid-cols-3">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-paper p-6">
-              {/* TODO: replace with real data */}
-              <dt className="font-mono text-xl font-bold text-ground sm:text-2xl">
-                {s.value}
-              </dt>
-              <dd className="mt-2 text-sm leading-relaxed text-ink-soft">
-                {s.label}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </Reveal>
+        <div className="flex flex-col justify-end gap-6 lg:col-span-5 lg:pb-2">
+          <Reveal delay={0.1}>
+            <Lead>
+              Banks, insurers, solar companies, telehealth providers and
+              government schemes all want to serve these communities — but none
+              can economically build the final human layer that makes it work.
+              Markets don&apos;t fail for lack of products. They fail for lack of
+              trusted last-mile reach.
+            </Lead>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="font-display text-2xl font-medium text-ink sm:text-3xl">
+              e2E Reach <Em className="text-marigold-ink">is</Em> that layer.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+
+      <Stagger
+        as="dl"
+        className="mt-20 grid grid-cols-1 border-t border-ink/15 sm:grid-cols-3"
+      >
+        {stats.map((s) => (
+          <StaggerItem
+            key={s.label}
+            className="border-b border-ink/10 py-8 sm:border-b-0 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0"
+          >
+            {/* TODO: replace with real data */}
+            <dt className="font-display text-5xl font-medium text-ground sm:text-6xl">
+              {s.value}
+            </dt>
+            <dd className="mt-3 max-w-[26ch] text-sm leading-relaxed text-ink-soft">
+              {s.label}
+            </dd>
+          </StaggerItem>
+        ))}
+      </Stagger>
     </Section>
   );
 }

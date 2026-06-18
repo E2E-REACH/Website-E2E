@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type ElementType } from "react";
 import { cn } from "@/lib/utils";
 
 type Tone = "paper" | "paper-dim" | "ground" | "ground-deep";
@@ -27,63 +27,73 @@ export function Section({
       id={id}
       data-tone={dark ? "dark" : "light"}
       className={cn(
-        "scroll-mt-20 px-5 py-20 sm:px-8 sm:py-24 lg:py-28",
+        "relative scroll-mt-24 px-5 py-24 sm:px-8 sm:py-32 lg:py-40",
         toneClasses[tone],
         className,
       )}
     >
-      <div className="mx-auto w-full max-w-7xl">{children}</div>
+      <div className="mx-auto w-full max-w-[88rem]">{children}</div>
     </section>
   );
 }
 
-/** Mono eyebrow with the node-dot motif; optional sequence number. */
-export function Eyebrow({
+/** Editorial kicker: indexed, mono, with a hairline tick. */
+export function Kicker({
+  index,
   children,
-  num,
   className,
 }: {
+  index?: string;
   children: ReactNode;
-  num?: string;
   className?: string;
 }) {
   return (
-    <p
+    <div
       className={cn(
-        "flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em]",
-        "text-marigold-ink in-data-[tone=dark]:text-marigold",
+        "flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.22em]",
         className,
       )}
     >
-      {num ? (
-        <span className="tabular-nums opacity-70">{num}</span>
-      ) : (
-        <span
-          aria-hidden
-          className="size-1.5 rounded-full bg-marigold-ink in-data-[tone=dark]:bg-marigold"
-        />
+      {index && (
+        <span className="text-marigold-ink in-data-[tone=dark]:text-marigold">
+          ({index})
+        </span>
       )}
-      {children}
-    </p>
+      <span className="h-px w-8 bg-ink/25 in-data-[tone=dark]:bg-paper/30" aria-hidden />
+      <span className="text-ink-soft in-data-[tone=dark]:text-paper/60">{children}</span>
+    </div>
   );
 }
 
-export function SectionHeading({
-  children,
+/** Fraunces display heading with an editorial scale. */
+export function Display({
+  as = "h2",
+  size = "lg",
   className,
+  children,
 }: {
-  children: ReactNode;
+  as?: ElementType;
+  size?: "sm" | "md" | "lg" | "xl";
   className?: string;
+  children: ReactNode;
 }) {
+  const Tag = as as ElementType;
+  const sizes: Record<string, string> = {
+    sm: "text-[clamp(1.6rem,3vw,2.2rem)]",
+    md: "text-[clamp(2rem,4.2vw,3.1rem)]",
+    lg: "text-[clamp(2.4rem,5.4vw,4.2rem)]",
+    xl: "text-[clamp(2.9rem,8.2vw,6.6rem)]",
+  };
   return (
-    <h2
+    <Tag
       className={cn(
-        "mt-3 max-w-2xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl lg:text-[2.75rem]",
+        "font-display font-medium leading-[1.02] text-balance",
+        sizes[size],
         className,
       )}
     >
       {children}
-    </h2>
+    </Tag>
   );
 }
 
@@ -97,7 +107,7 @@ export function Lead({
   return (
     <p
       className={cn(
-        "mt-5 max-w-xl text-lg leading-relaxed text-pretty",
+        "max-w-xl text-lg leading-relaxed text-pretty sm:text-xl",
         "text-ink-soft in-data-[tone=dark]:text-paper/75",
         className,
       )}
@@ -105,4 +115,9 @@ export function Lead({
       {children}
     </p>
   );
+}
+
+/** Em — italic Fraunces emphasis (the editorial accent). */
+export function Em({ children, className }: { children: ReactNode; className?: string }) {
+  return <em className={cn("italic", className)}>{children}</em>;
 }

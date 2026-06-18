@@ -48,12 +48,12 @@ export function SiteNav() {
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-8 lg:flex">
           {siteConfig.nav.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="rounded-md text-sm font-medium text-paper/80 transition-colors hover:text-paper outline-none focus-visible:ring-2 focus-visible:ring-marigold/60"
+                className="rounded font-mono text-[0.72rem] uppercase tracking-[0.14em] text-paper/70 transition-colors hover:text-paper outline-none focus-visible:ring-2 focus-visible:ring-marigold/60"
               >
                 {item.label}
               </a>

@@ -18,22 +18,22 @@ export function Wordmark({
   return (
     <span
       className={cn(
-        "font-display font-bold leading-none tracking-tight inline-flex items-baseline select-none",
+        "font-display font-semibold leading-none inline-flex items-baseline select-none tracking-[-0.02em]",
         base,
         className,
       )}
       aria-label="e2E Reach"
     >
-      <span className="text-[0.62em] font-medium opacity-80" aria-hidden>
+      <span className="text-[0.64em] font-normal italic opacity-80" aria-hidden>
         e
       </span>
-      <span className="text-marigold font-extrabold mx-[0.02em]" aria-hidden>
+      <span className="text-marigold font-bold mx-[0.015em]" aria-hidden>
         2
       </span>
-      <span className="text-[1.18em] font-extrabold -ml-[0.02em]" aria-hidden>
+      <span className="text-[1.16em] font-bold" aria-hidden>
         E
       </span>
-      <span className="ml-[0.34em] text-[0.74em] font-semibold tracking-tight" aria-hidden>
+      <span className="ml-[0.36em] font-sans text-[0.5em] font-semibold uppercase tracking-[0.18em] opacity-70" aria-hidden>
         Reach
       </span>
     </span>
