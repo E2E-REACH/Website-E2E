@@ -3,9 +3,9 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 
 // TODO: replace placeholder stats with real, cited figures before launch.
 const stats = [
-  { value: "[—]", label: "people in underserved & rural communities" },
+  { value: "[—]", label: "people in unserved & rural communities" },
   { value: "[—]", label: "without reliable access to essential services" },
-  { value: "[—]", label: "agents it takes to cover one village, the old way" },
+  { value: "[—]", label: "single-purpose agents one Champion replaces" },
 ];
 
 export function TheGap() {

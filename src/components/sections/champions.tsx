@@ -38,8 +38,8 @@ export function Champions() {
           </Reveal>
           <Reveal delay={0.05}>
             <Display as="h2" size="lg" className="mt-7">
-              A neighbour you already trust — and the{" "}
-              <Em>ladder she climbs.</Em>
+              A neighbour you already trust — and a{" "}
+              <Em>community that rises with her.</Em>
             </Display>
           </Reveal>
         </div>
@@ -47,8 +47,8 @@ export function Champions() {
           <Reveal delay={0.1}>
             <Lead className="text-base sm:text-lg">
               Most of our Champions are women. The three ways they earn aren&apos;t
-              separate jobs — they&apos;re rungs on a ladder, climbed over time. A
-              Champion can hold all three at once.
+              separate jobs — they&apos;re rungs on a ladder she climbs over time.
+              As she rises, so does the trust and standing of her whole community.
             </Lead>
           </Reveal>
         </div>
