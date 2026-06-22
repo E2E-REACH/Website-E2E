@@ -1,15 +1,18 @@
 export const siteConfig = {
   name: "e2E Reach",
   nameExplainer: "e-commerce to Ecosystem",
-  // Both CTAs point to anchors for now — no backend yet.
-  ctaPrimary: { label: "Become a Champion", href: "#become" },
-  ctaSecondary: { label: "Partner with us", href: "#partners" },
+  tagline: "Ecosystem commerce for India's last mile",
+  contactEmail: "information@e2ereach.com",
+  // Platform-first: lead with partnership; the Champion path is secondary.
+  ctaPrimary: { label: "Partner with us", href: "#partners" },
+  ctaSecondary: { label: "Explore the platform", href: "#platform" },
+  ctaChampion: { label: "Join as a Champion", href: "#contact" },
   nav: [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Champions", href: "#champions" },
-    { label: "Earnings", href: "#earnings" },
-    { label: "Sectors", href: "#sectors" },
+    { label: "Platform", href: "#platform" },
+    { label: "Verticals", href: "#verticals" },
+    { label: "Network", href: "#network" },
+    { label: "Architecture", href: "#architecture" },
     { label: "Impact", href: "#impact" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Partners", href: "#partners" },
   ],
 } as const;

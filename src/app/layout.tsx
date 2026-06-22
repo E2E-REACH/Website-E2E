@@ -28,9 +28,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "e2E Reach — Become a Well-being Champion",
+  title: "e2E Reach — India's trusted last-mile ecosystem",
   description:
-    "e2E Reach makes you a Well-being Champion — bringing healthcare, finance, clean energy, and government schemes to your neighbours' doorstep, and paying you a real income to do it.",
+    "e2E Reach turns community trust into national infrastructure — a living, trusted network carrying commerce, finance, healthcare and government schemes to the 900 million Indians the formal economy can't yet reach. Built on India's digital rails.",
 };
 
 export default function RootLayout({

@@ -9,28 +9,28 @@ import {
 
 const faqs = [
   {
-    q: "Who can become a Champion?",
-    a: "Any local person who is known and trusted in their community — and is ready to learn. Most of our Champions are women. What matters is your relationships and your willingness, not your background.",
+    q: "What exactly is e2E Reach?",
+    a: "An ecosystem platform — not a store or an app — that carries commerce, finance, healthcare and government schemes to the last mile through a trusted, human-led network. Many formal services run on top of one community-rooted distribution layer.",
   },
   {
-    q: "Do I need a degree or experience?",
-    a: "No. There is no degree or prior experience requirement. We train you on the services, the tools and the way of working — you start with what you complete, and grow from there.",
+    q: "How is this different from a gig or delivery platform?",
+    a: "Gig platforms optimise for transactions; we build for trust and depth. A single Champion holds a long-term relationship with 200–500 households across many services — relationship capital, not one-off deliveries.",
   },
   {
-    q: "How and when do I get paid?",
-    a: "You earn per task and commission as a gig worker, per program as a knowledge provider, and margin plus recurring revenue as an entrepreneur. [PLACEHOLDER: exact payout method and timing — e.g. weekly bank transfer. TODO: confirm payout policy.]",
+    q: "How do you maintain trust, privacy and regulatory compliance?",
+    a: "By design. The platform is engineered to integrate with India's digital public infrastructure, embeds RBI/SEBI/IRDA/GST rules as configurable policy, is built to be DPDP-compliant with consent management, and uses a permissioned-blockchain trust layer with audit trails and vKYC checks.",
   },
   {
-    q: "Is there a joining fee?",
-    a: "[PLACEHOLDER: state the intended joining-fee policy clearly here. TODO: confirm whether onboarding is free or has a fee, and document it before launch.]",
+    q: "How do you scale without owning inventory or employees?",
+    a: "An asset-light, hub-and-spoke model: a lean central hub, regional partners who activate existing community networks, and Champions who invest time and relationships — not capital. Unit economics are proven at district level before expanding.",
   },
   {
-    q: "What support and training do I get?",
-    a: "You get the platform's tools, structured training, payment support, and ongoing help — so you're never carrying a service to your community without backing.",
+    q: "Who becomes a Well-being Champion — and is there a joining fee?",
+    a: "Trusted local people — mostly women — recruited from existing networks such as ASHA and Anganwadi workers, women's cooperatives, Heartfulness volunteers and ex-armed-forces. No degree or prior experience is required. [PLACEHOLDER: state the intended joining-fee policy. TODO: confirm before launch.]",
   },
   {
-    q: "Which areas are you live in?",
-    a: "[PLACEHOLDER: list the regions/states where e2E Reach is currently operating. TODO: replace with real, current coverage.]",
+    q: "How can our organisation partner with e2E Reach?",
+    a: "As a strategic partner (brands, financial, healthcare, logistics), an impact investor, or an ecosystem enabler (technology, training, government programmes). Write to information@e2ereach.com to start a conversation.",
   },
 ];
 
@@ -40,17 +40,23 @@ export function Faq() {
       <div className="grid grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Reveal>
-            <Kicker>Questions</Kicker>
+            <Kicker>FAQ</Kicker>
           </Reveal>
           <Reveal delay={0.05}>
             <Display as="h2" size="md" className="mt-7">
-              Things Champions <Em>ask us.</Em>
+              Questions, <Em>answered.</Em>
             </Display>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xs text-base leading-relaxed text-ink-soft">
-              Don&apos;t see your question? Reach out — we&apos;d rather you ask
-              than wonder.
+              Still curious? Write to us at{" "}
+              <a
+                href="mailto:information@e2ereach.com"
+                className="text-marigold-ink underline underline-offset-4"
+              >
+                information@e2ereach.com
+              </a>
+              .
             </p>
           </Reveal>
         </div>
@@ -64,7 +70,7 @@ export function Faq() {
                   value={`faq-${i}`}
                   className="border-b border-ink/10"
                 >
-                  <AccordionTrigger className="gap-6 py-6 font-display text-xl font-medium text-ink hover:no-underline data-[panel-open]:text-marigold-ink sm:text-2xl">
+                  <AccordionTrigger className="gap-6 py-6 font-display text-xl font-medium text-ink hover:no-underline sm:text-2xl">
                     {item.q}
                   </AccordionTrigger>
                   <AccordionContent className="max-w-2xl pb-6 text-base leading-relaxed text-ink-soft">

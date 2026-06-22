@@ -1,51 +1,51 @@
 import {
-  HeartPulse,
-  Landmark,
-  Wrench,
-  Sun,
   ScrollText,
-  BookOpen,
+  Landmark,
+  HeartPulse,
+  Scale,
+  ShoppingBag,
+  Sprout,
 } from "lucide-react";
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
-const sectors = [
+const verticals = [
   {
-    icon: HeartPulse,
-    title: "Healthcare",
-    body: "Telehealth consults, diagnostics and follow-ups, brought to the doorstep — care that used to mean a day's travel.",
+    icon: ScrollText,
+    title: "Government schemes & entitlements",
+    body: "200+ welfare programmes, subsidies and entitlements — finally reaching the families they were written for, with assisted enrolment and documentation.",
     span: "sm:col-span-2 lg:col-span-2",
     feature: true,
   },
   {
     icon: Landmark,
-    title: "Financial services & literacy",
-    body: "Savings, credit, insurance — and the literacy to use them well.",
+    title: "Financial services",
+    body: "Mutual funds, insurance, credit and savings — with the literacy to use them.",
     span: "lg:col-span-1",
   },
   {
-    icon: Wrench,
-    title: "Household services",
-    body: "Everyday services, coordinated and fulfilled through one trusted person.",
+    icon: HeartPulse,
+    title: "Health services",
+    body: "Telemedicine, health insurance and preventive care at the doorstep.",
     span: "lg:col-span-1",
   },
   {
-    icon: Sun,
-    title: "Renewable energy",
-    body: "Clean-energy products like solar — sold, installed and supported locally.",
+    icon: Scale,
+    title: "Legal services",
+    body: "Documentation, advisory and dispute resolution made accessible.",
     span: "lg:col-span-1",
   },
   {
-    icon: BookOpen,
-    title: "Awareness & education",
-    body: "Camps and sessions that build knowledge, confidence and uptake.",
+    icon: Sprout,
+    title: "Supply-side aggregation",
+    body: "Rural producers reach wider markets; bulk procurement for the network.",
     span: "lg:col-span-1",
   },
   {
-    icon: ScrollText,
-    title: "Government schemes & entitlements",
-    body: "Eligibility checks and applications, so the benefits people are owed actually reach them.",
+    icon: ShoppingBag,
+    title: "Marketplace access via ONDC",
+    body: "Community group-buying on open networks — volume pricing and consolidated logistics, inspired by the Pinduoduo model.",
     span: "sm:col-span-2 lg:col-span-2",
     feature: true,
   },
@@ -53,23 +53,23 @@ const sectors = [
 
 export function Sectors() {
   return (
-    <Section id="sectors" tone="paper">
+    <Section id="verticals" tone="paper-dim">
       <div className="grid grid-cols-1 items-end gap-x-10 gap-y-6 lg:grid-cols-12">
         <div className="lg:col-span-8">
           <Reveal>
-            <Kicker index="05">What we carry</Kicker>
+            <Kicker index="03">The verticals</Kicker>
           </Reveal>
           <Reveal delay={0.05}>
             <Display as="h2" size="lg" className="mt-7">
-              Many services. <Em>One trusted person</Em> to deliver them.
+              Six ecosystems, <Em>one trusted doorstep.</Em>
             </Display>
           </Reveal>
         </div>
         <div className="lg:col-span-4">
           <Reveal delay={0.1}>
             <Lead className="text-base sm:text-lg">
-              A single Champion can carry all of these — which is exactly why the
-              model works where a dozen single-purpose agents can&apos;t.
+              Each vertical runs on its own playbook — but arrives through the
+              same trusted person. One relationship, the whole formal economy.
             </Lead>
           </Reveal>
         </div>
@@ -80,7 +80,7 @@ export function Sectors() {
         className="mt-16 grid auto-rows-[minmax(11rem,1fr)] grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"
         amount={0.08}
       >
-        {sectors.map((s) => {
+        {verticals.map((s) => {
           const Icon = s.icon;
           return (
             <StaggerItem
@@ -89,10 +89,9 @@ export function Sectors() {
               className={cn(
                 "group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-paper p-6 ring-1 ring-ink/10 transition-all duration-300 hover:ring-ink/25",
                 s.span,
-                s.feature && "bg-ground-soft/40",
+                s.feature && "bg-ground text-paper ring-ground",
               )}
             >
-              {/* hover spotlight */}
               <span
                 aria-hidden
                 className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
@@ -103,8 +102,10 @@ export function Sectors() {
               />
               <span
                 className={cn(
-                  "relative flex items-center justify-center rounded-full bg-ground text-paper transition-colors group-hover:bg-marigold group-hover:text-ink",
-                  s.feature ? "size-14" : "size-12",
+                  "relative flex items-center justify-center rounded-full transition-colors",
+                  s.feature
+                    ? "size-14 bg-marigold text-ink"
+                    : "size-12 bg-ground text-paper group-hover:bg-marigold group-hover:text-ink",
                 )}
               >
                 <Icon className={s.feature ? "size-6" : "size-5"} aria-hidden />
@@ -112,16 +113,16 @@ export function Sectors() {
               <div className="relative mt-6">
                 <h3
                   className={cn(
-                    "font-display font-medium text-ink",
-                    s.feature ? "text-2xl sm:text-3xl" : "text-xl",
+                    "font-display font-medium",
+                    s.feature ? "text-2xl text-paper sm:text-3xl" : "text-xl text-ink",
                   )}
                 >
                   {s.title}
                 </h3>
                 <p
                   className={cn(
-                    "mt-2 leading-relaxed text-ink-soft",
-                    s.feature ? "max-w-md text-base" : "text-sm",
+                    "mt-2 leading-relaxed",
+                    s.feature ? "max-w-md text-base text-paper/75" : "text-sm text-ink-soft",
                   )}
                 >
                   {s.body}

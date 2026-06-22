@@ -4,32 +4,49 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 
 const loop = [
   "More Champions join",
-  "Deeper trust & coverage",
-  "More services taken up",
+  "Deeper community trust & coverage",
+  "More services & collective buying power",
   "More partners distribute through e2E",
-  "More earning per Champion",
+  "More value per household",
+];
+
+const groups = [
+  "Mutual-fund SIP circles",
+  "Insurance buying collectives",
+  "ONDC procurement groups",
 ];
 
 export function Flywheel() {
   return (
-    <Section id="flywheel" tone="paper">
+    <Section id="compounds" tone="paper-dim">
       <div className="grid grid-cols-1 gap-x-10 gap-y-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Reveal>
-            <Kicker index="07">Why it compounds</Kicker>
+            <Kicker index="07">Network effects</Kicker>
           </Reveal>
           <Reveal delay={0.05}>
             <Display as="h2" size="lg" className="mt-7">
-              Trust compounds — and that&apos;s the <Em>moat.</Em>
+              Trust that compounds — <Em>by design.</Em>
             </Display>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-7 max-w-md text-lg leading-relaxed text-ink-soft text-pretty">
-              One trusted person carrying many services beats a dozen
-              single-purpose agents. Every Champion deepens trust, every service
-              builds on the last — and that trust is the one thing competitors
-              can&apos;t simply buy.
+              By Reed&apos;s Law, a group-forming network&apos;s value grows as
+              2ⁿ. As Champions form circles and collectives, density and
+              community lock-in become a moat no product feature can replicate.
             </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {groups.map((g) => (
+                <span
+                  key={g}
+                  className="rounded-full border border-ink/15 px-4 py-1.5 text-sm font-medium text-ink"
+                >
+                  {g}
+                </span>
+              ))}
+            </div>
           </Reveal>
         </div>
 
