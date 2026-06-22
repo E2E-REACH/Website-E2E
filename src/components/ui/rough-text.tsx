@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 type RoughType = "underline" | "circle" | "box" | "highlight" | "bracket";
 
 /**
- * Hand-drawn marigold annotation that draws itself when scrolled into view —
- * a warm, confident way to emphasise a key word or figure. Used only in the
- * "human" sections; never in the institutional ones.
+ * Hand-drawn marigold annotation that draws itself when scrolled into view.
+ * Re-measures on size change (ResizeObserver) so it re-wraps correctly when the
+ * text changes — e.g. when switching EN ⇄ हिंदी — or after fonts load.
  */
 export function RoughText({
   children,
@@ -32,20 +32,41 @@ export function RoughText({
   useEffect(() => {
     const el = ref.current;
     if (!el || !inView) return;
-    const annotation = annotate(el, {
-      type,
-      color,
-      strokeWidth: 2.4,
-      padding: type === "circle" ? [4, 8] : type === "box" ? 6 : 3,
-      multiline,
-      iterations: type === "circle" || type === "box" ? 2 : 1,
-      animationDuration: reduced ? 0 : 800,
+
+    let annotation: ReturnType<typeof annotate> | undefined;
+    let drawn = false;
+    const draw = (animate: boolean) => {
+      annotation?.remove();
+      annotation = annotate(el, {
+        type,
+        color,
+        strokeWidth: 2.4,
+        padding: type === "circle" ? [6, 12] : type === "box" ? 6 : 3,
+        multiline,
+        iterations: type === "circle" || type === "box" ? 2 : 1,
+        animationDuration: animate && !reduced ? 800 : 0,
+      });
+      annotation.show();
+    };
+
+    const first = setTimeout(() => {
+      draw(true);
+      drawn = true;
+    }, 220);
+
+    let redraw: ReturnType<typeof setTimeout>;
+    const ro = new ResizeObserver(() => {
+      if (!drawn) return;
+      clearTimeout(redraw);
+      redraw = setTimeout(() => draw(false), 90);
     });
-    // let layout settle (fonts, reveal transforms) before measuring
-    const t = setTimeout(() => annotation.show(), 220);
+    ro.observe(el);
+
     return () => {
-      clearTimeout(t);
-      annotation.remove();
+      clearTimeout(first);
+      clearTimeout(redraw);
+      ro.disconnect();
+      annotation?.remove();
     };
   }, [inView, type, color, multiline, reduced]);
 
