@@ -1,5 +1,6 @@
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
+import { RoughText } from "@/components/ui/rough-text";
 
 // Figures reflect e2E Reach's market framing (corporate & investor decks).
 const stats = [
@@ -19,7 +20,9 @@ export function TheGap() {
           <Reveal delay={0.05}>
             <Display as="h2" size="lg" className="mt-7">
               The bottleneck isn&apos;t demand. It&apos;s{" "}
-              <Em className="text-marigold-ink">trusted reach.</Em>
+              <RoughText type="underline" multiline>
+                <Em className="text-marigold-ink">trusted reach.</Em>
+              </RoughText>
             </Display>
           </Reveal>
         </div>

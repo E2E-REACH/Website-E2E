@@ -1,6 +1,8 @@
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { RoughText } from "@/components/ui/rough-text";
+import { Sketch } from "@/components/ui/sketch";
 
 const steps = [
   {
@@ -34,7 +36,10 @@ export function HowOnGround() {
         </Reveal>
         <Reveal delay={0.05}>
           <Display as="h2" size="lg" className="mt-7">
-            How it actually <Em>works.</Em>
+            How it actually{" "}
+            <RoughText type="circle">
+              <Em>works.</Em>
+            </RoughText>
           </Display>
         </Reveal>
         <Reveal delay={0.1}>
@@ -55,7 +60,14 @@ export function HowOnGround() {
           />
         </Reveal>
 
-        <Stagger as="ol" className="flex flex-col">
+        <div>
+          <Reveal className="mb-1 flex items-center gap-3 text-marigold">
+            <Sketch variant="arrow" width={84} height={52} />
+            <span className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-ink-soft/60">
+              four simple steps
+            </span>
+          </Reveal>
+          <Stagger as="ol" className="flex flex-col">
           {steps.map((s) => (
             <StaggerItem
               as="li"
@@ -75,7 +87,8 @@ export function HowOnGround() {
               </div>
             </StaggerItem>
           ))}
-        </Stagger>
+          </Stagger>
+        </div>
       </div>
     </Section>
   );

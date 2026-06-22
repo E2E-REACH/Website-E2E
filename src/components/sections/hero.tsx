@@ -4,6 +4,7 @@ import { CtaButton } from "@/components/ui/cta-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { MovingGlow } from "@/components/ui/moving-glow";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { RoughText } from "@/components/ui/rough-text";
 import { Reveal, RevealMask } from "@/components/ui/reveal";
 import { Em } from "@/components/ui/section";
 
@@ -90,7 +91,11 @@ export function Hero() {
             {signals.map((s) => (
               <div key={s.l} className="py-5 lg:px-6 lg:first:pl-0">
                 <dt className="font-display text-2xl font-medium text-paper sm:text-3xl">
-                  {s.v}
+                  {s.v === "900M" ? (
+                    <RoughText type="circle">900M</RoughText>
+                  ) : (
+                    s.v
+                  )}
                 </dt>
                 <dd className="mt-1 text-sm text-paper/60">{s.l}</dd>
               </div>
