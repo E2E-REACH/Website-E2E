@@ -1,65 +1,34 @@
 import { Banknote, Users, Globe } from "lucide-react";
+import type { Dict } from "@/lib/i18n";
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 
-const pillars = [
-  {
-    icon: Banknote,
-    title: "Economic",
-    points: [
-      "Sustainable livelihoods at the last mile",
-      "Higher income for micro-entrepreneurs",
-      "Improved financial access for communities",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Social",
-    points: [
-      "Strengthened social capital & trust networks",
-      "Life- and employability-skill upskilling",
-      "Women's economic empowerment",
-    ],
-  },
-  {
-    icon: Globe,
-    title: "Systemic",
-    points: [
-      "Deepened financial & healthcare inclusion",
-      "A scalable template for underserved geographies",
-      "District-level coordination infrastructure",
-    ],
-  },
-];
+const icons = [Banknote, Users, Globe];
 
-export function Impact() {
+export function Impact({ t }: { t: Dict["impact"] }) {
   return (
     <Section id="impact" tone="paper">
       <div className="grid grid-cols-1 items-end gap-x-10 gap-y-6 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <Reveal>
-            <Kicker index="08">Impact</Kicker>
+            <Kicker index="08">{t.kicker}</Kicker>
           </Reveal>
           <Reveal delay={0.05}>
             <Display as="h2" size="lg" className="mt-7">
-              One network. A <Em>triple bottom line.</Em>
+              {t.h} <Em>{t.hEm}</Em>
             </Display>
           </Reveal>
         </div>
         <div className="lg:col-span-5">
           <Reveal delay={0.1}>
-            <Lead className="text-base sm:text-lg">
-              The same infrastructure that moves commerce also moves inclusion —
-              measurable outcomes for people, communities and the system as a
-              whole.
-            </Lead>
+            <Lead className="text-base sm:text-lg">{t.lead}</Lead>
           </Reveal>
         </div>
       </div>
 
       <Stagger className="mt-16 grid grid-cols-1 gap-px border-t border-ink/15 md:grid-cols-3">
-        {pillars.map((p) => {
-          const Icon = p.icon;
+        {t.pillars.map((p, i) => {
+          const Icon = icons[i];
           return (
             <StaggerItem
               key={p.title}

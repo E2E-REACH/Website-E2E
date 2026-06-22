@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
 export function Sketch({
   variant = "arrow",
   color = "#E8A33D",
-  width = 110,
-  height = 64,
+  width = 58,
+  height = 58,
   className,
 }: {
   variant?: "arrow" | "squiggle";
@@ -28,24 +28,35 @@ export function Sketch({
     if (!svg) return;
     svg.innerHTML = "";
     const rc = rough.svg(svg);
-    const opts = { stroke: color, strokeWidth: 2.2, roughness: 1.9, bowing: 2 };
+    // low roughness + fixed seed → a clean, legible hand-drawn mark every render
+    const opts = {
+      stroke: color,
+      strokeWidth: 2,
+      roughness: 1,
+      bowing: 1,
+      seed: 7,
+    };
 
     if (variant === "arrow") {
       const w = width;
       const h = height;
+      const tipX = w * 0.5;
+      const tipY = h * 0.86;
+      // gently curving vertical shaft
       svg.appendChild(
         rc.path(
-          `M ${w * 0.18} 8 C ${w * 0.05} ${h * 0.5}, ${w * 0.95} ${h * 0.38}, ${w * 0.56} ${h - 12}`,
+          `M ${w * 0.5} ${h * 0.1} Q ${w * 0.28} ${h * 0.5} ${tipX} ${tipY}`,
           opts,
         ),
       );
-      svg.appendChild(rc.line(w * 0.56, h - 12, w * 0.38, h - 26, opts));
-      svg.appendChild(rc.line(w * 0.56, h - 12, w * 0.74, h - 28, opts));
+      // tidy arrowhead
+      svg.appendChild(rc.line(tipX, tipY, tipX - w * 0.18, tipY - h * 0.18, opts));
+      svg.appendChild(rc.line(tipX, tipY, tipX + w * 0.18, tipY - h * 0.18, opts));
     } else {
       const seg = width / 4;
       svg.appendChild(
         rc.path(
-          `M 4 ${height / 2} q ${seg / 2} -13 ${seg} 0 t ${seg} 0 t ${seg} 0 t ${seg} 0`,
+          `M 4 ${height / 2} q ${seg / 2} -11 ${seg} 0 t ${seg} 0 t ${seg} 0 t ${seg} 0`,
           opts,
         ),
       );
@@ -58,7 +69,7 @@ export function Sketch({
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
-      className={cn("pointer-events-none", className)}
+      className={cn("pointer-events-none shrink-0", className)}
       aria-hidden
     />
   );

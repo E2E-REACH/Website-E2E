@@ -6,68 +6,29 @@ import {
   Languages,
   Cpu,
 } from "lucide-react";
+import type { Dict } from "@/lib/i18n";
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 
-const rails = [
-  {
-    icon: Fingerprint,
-    title: "India's digital public infrastructure",
-    body: "Designed to integrate with Aadhaar, UPI and DigiLocker — the rails the country already runs on.",
-    tags: ["Aadhaar", "UPI", "DigiLocker"],
-  },
-  {
-    icon: Network,
-    title: "Open networks",
-    body: "ONDC for open commerce and the Account Aggregator framework for consented financial data flows.",
-    tags: ["ONDC", "Account Aggregator"],
-  },
-  {
-    icon: ShieldCheck,
-    title: "Compliance by design",
-    body: "Regulatory rules embedded as configurable policy — with consent management built in from day one.",
-    tags: ["RBI · SEBI · IRDA · GST", "DPDP"],
-  },
-  {
-    icon: Blocks,
-    title: "A trust layer",
-    body: "A permissioned-blockchain design for tamper-evident records, end-to-end traceability and audit trails.",
-    tags: ["Permissioned ledger", "Audit trails"],
-  },
-  {
-    icon: Languages,
-    title: "Assisted & vernacular",
-    body: "No app literacy required — assisted journeys in local languages, with micro-ticket flows for rural markets.",
-    tags: ["Low-literacy", "₹100–500 SIPs"],
-  },
-  {
-    icon: Cpu,
-    title: "AI + human trust",
-    body: "Technology handles the back end; trusted humans own the front-end relationship. Both, not either.",
-    tags: ["AI back end", "Human front end"],
-  },
-];
+const icons = [Fingerprint, Network, ShieldCheck, Blocks, Languages, Cpu];
 
-export function Architecture() {
+export function Architecture({ t }: { t: Dict["architecture"] }) {
   return (
     <Section id="architecture" tone="paper">
       <div className="grid grid-cols-1 items-end gap-x-10 gap-y-6 lg:grid-cols-12">
         <div className="lg:col-span-8">
           <Reveal>
-            <Kicker index="06">The architecture</Kicker>
+            <Kicker index="06">{t.kicker}</Kicker>
           </Reveal>
           <Reveal delay={0.05}>
             <Display as="h2" size="lg" className="mt-7">
-              Built on India&apos;s own <Em>digital rails.</Em>
+              {t.h} <Em>{t.hEm}</Em>
             </Display>
           </Reveal>
         </div>
         <div className="lg:col-span-4">
           <Reveal delay={0.1}>
-            <Lead className="text-base sm:text-lg">
-              A country-as-a-platform approach — engineered to plug into national
-              infrastructure and meet its rules, so trust becomes the currency.
-            </Lead>
+            <Lead className="text-base sm:text-lg">{t.lead}</Lead>
           </Reveal>
         </div>
       </div>
@@ -77,8 +38,8 @@ export function Architecture() {
         className="mt-16 grid grid-cols-1 gap-x-12 border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-3"
         amount={0.08}
       >
-        {rails.map((r) => {
-          const Icon = r.icon;
+        {t.rails.map((r, i) => {
+          const Icon = icons[i];
           return (
             <StaggerItem
               key={r.title}
@@ -97,12 +58,12 @@ export function Architecture() {
                 </p>
               </div>
               <div className="mt-auto flex flex-wrap gap-2 pt-1">
-                {r.tags.map((t) => (
+                {r.tags.map((tag) => (
                   <span
-                    key={t}
+                    key={tag}
                     className="rounded-full bg-ground/[0.06] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wide text-ground"
                   >
-                    {t}
+                    {tag}
                   </span>
                 ))}
               </div>

@@ -1,3 +1,4 @@
+import { getDict } from "@/lib/locale";
 import { SiteNav } from "@/components/sections/site-nav";
 import { Hero } from "@/components/sections/hero";
 import { HowOnGround } from "@/components/sections/how-on-ground";
@@ -16,28 +17,29 @@ import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 import { SiteFooter } from "@/components/sections/site-footer";
 
-export default function Home() {
+export default async function Home() {
+  const { locale, t } = await getDict();
   return (
     <>
-      <SiteNav />
+      <SiteNav locale={locale} nav={t.nav} cta={t.cta} langName={t.langName} langSwitchLabel={t.langSwitchLabel} />
       <main className="flex-1">
-        <Hero />
-        <HowOnGround />
-        <TheGap />
-        <HowItWorks />
-        <Sectors />
-        <Champions />
-        <Earnings />
-        <Architecture />
-        <Flywheel />
-        <Impact />
-        <WhyNow />
-        <AcrossIndia />
-        <Partners />
-        <Faq />
-        <FinalCta />
+        <Hero t={t.hero} cta={t.cta} />
+        <HowOnGround t={t.how} />
+        <TheGap t={t.gap} />
+        <HowItWorks t={t.platform} />
+        <Sectors t={t.verticals} />
+        <Champions t={t.network} cta={t.cta} />
+        <Earnings t={t.livelihoods} />
+        <Architecture t={t.architecture} />
+        <Flywheel t={t.flywheel} />
+        <Impact t={t.impact} />
+        <WhyNow t={t.whynow} />
+        <AcrossIndia t={t.india} />
+        <Partners t={t.partners} cta={t.cta} />
+        <Faq t={t.faq} />
+        <FinalCta t={t.finalCta} cta={t.cta} />
       </main>
-      <SiteFooter />
+      <SiteFooter t={t.footer} nav={t.nav} />
     </>
   );
 }
