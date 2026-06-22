@@ -1,6 +1,6 @@
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { Photo } from "@/components/ui/photo";
 
 const points = [
   "Prove the unit economics in one district",
@@ -41,11 +41,11 @@ export function AcrossIndia() {
         </div>
 
         <Reveal delay={0.1}>
-          <ImagePlaceholder
-            tone="dark"
-            className="aspect-[4/3] w-full"
-            label="A network lighting up across India"
-            brief="An accurate map of India with warm marigold nodes glowing across states and districts, joined by faint connecting lines — a living trust network spreading nationwide, on a deep-teal background. (Borders must be the official map of India.)"
+          <Photo
+            src="/images/india-network.jpg"
+            alt="A map of India glowing with warm marigold nodes across states and districts, joined by faint connecting lines — a living trust network spreading nationwide."
+            className="aspect-[4/3] w-full ring-1 ring-paper/15"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </Reveal>
       </div>
