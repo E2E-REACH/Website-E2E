@@ -80,9 +80,10 @@
   --color-line: var(--line);
 
   /* Fonts */
-  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+  /* Latin first; the Devanagari face is the per-glyph fallback for Hindi. */
+  --font-sans: var(--font-hanken), var(--font-mukta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), var(--font-tiro), ui-serif, Georgia, serif;
+  --font-mono: var(--font-space-mono), var(--font-mukta), ui-monospace, monospace;
 
   /* shadcn semantic mappings */
   --color-card: var(--card);
