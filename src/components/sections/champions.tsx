@@ -2,7 +2,7 @@ import { Bike, GraduationCap, TrendingUp, ArrowUpRight } from "lucide-react";
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { Photo } from "@/components/ui/photo";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -67,10 +67,12 @@ export function Champions() {
       </div>
 
       <Reveal delay={0.05}>
-        <ImagePlaceholder
-          className="mt-12 aspect-[16/7] w-full"
-          label="The faces of the network"
-          brief="A group of women Well-being Champions in a community setting — confident, mid-conversation with residents; hopeful, documentary photography."
+        <Photo
+          src="/images/network-champions.jpg"
+          alt="Five women Well-being Champions of different ages stand together in a village lane at golden hour, some holding tablets and folders, mid-conversation."
+          className="mt-12 aspect-[16/9] w-full ring-1 ring-ink/10 lg:aspect-[21/9]"
+          sizes="100vw"
+          position="center 35%"
         />
       </Reveal>
 

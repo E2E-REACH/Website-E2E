@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site";
 import { CtaButton } from "@/components/ui/cta-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { MovingGlow } from "@/components/ui/moving-glow";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import { Photo } from "@/components/ui/photo";
 import { RoughText } from "@/components/ui/rough-text";
 import { Reveal, RevealMask } from "@/components/ui/reveal";
 import { Em } from "@/components/ui/section";
@@ -75,11 +75,13 @@ export function Hero() {
 
         {/* Signature photo (desktop) */}
         <Reveal delay={0.2} className="hidden lg:block">
-          <ImagePlaceholder
-            tone="dark"
-            className="aspect-[4/5] w-full"
-            label="A Champion at the doorstep"
-            brief="A Well-being Champion — a woman — sitting with a rural family at their doorstep, showing them a tablet. Warm natural light, honest documentary style."
+          <Photo
+            src="/images/hero-champion.jpg"
+            alt="A Well-being Champion shows a tablet to a rural family at their doorstep in the warm evening light."
+            className="aspect-[4/5] w-full ring-1 ring-paper/15"
+            sizes="(max-width: 1024px) 0px, 45vw"
+            priority
+            position="center"
           />
         </Reveal>
       </div>

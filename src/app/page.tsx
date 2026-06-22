@@ -10,6 +10,7 @@ import { Architecture } from "@/components/sections/architecture";
 import { Flywheel } from "@/components/sections/flywheel";
 import { Impact } from "@/components/sections/impact";
 import { WhyNow } from "@/components/sections/why-now";
+import { AcrossIndia } from "@/components/sections/across-india";
 import { Partners } from "@/components/sections/partners";
 import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
@@ -31,6 +32,7 @@ export default function Home() {
         <Flywheel />
         <Impact />
         <WhyNow />
+        <AcrossIndia />
         <Partners />
         <Faq />
         <FinalCta />
