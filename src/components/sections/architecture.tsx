@@ -74,7 +74,7 @@ export function Architecture() {
 
       <Stagger
         as="ul"
-        className="mt-16 grid grid-cols-1 border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-3"
+        className="mt-16 grid grid-cols-1 gap-x-12 border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-3"
         amount={0.08}
       >
         {rails.map((r) => {
@@ -83,7 +83,7 @@ export function Architecture() {
             <StaggerItem
               key={r.title}
               as="li"
-              className="flex flex-col gap-4 border-b border-ink/10 py-8 sm:px-7 sm:[&:nth-child(odd)]:pl-0 lg:[&:nth-child(3n+1)]:pl-0 lg:[&:not(:nth-child(3n))]:border-r lg:border-ink/10"
+              className="flex flex-col gap-4 border-b border-ink/10 py-8"
             >
               <span className="flex size-11 items-center justify-center rounded-full bg-ground-soft text-ground">
                 <Icon className="size-5" aria-hidden />

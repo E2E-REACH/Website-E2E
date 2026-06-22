@@ -75,8 +75,9 @@ export function RevealMask({
   const reduced = useReducedMotion();
   const Tag = as as ElementType;
   if (reduced) return <Tag className={cn("block", className)}>{children}</Tag>;
+  // pb/-mb give descenders (y, g, j) room so the overflow mask doesn't clip them.
   return (
-    <Tag className={cn("block overflow-hidden", className)}>
+    <Tag className={cn("block overflow-hidden pb-[0.22em] -mb-[0.22em]", className)}>
       <motion.span
         className="block"
         initial={{ y: "110%" }}

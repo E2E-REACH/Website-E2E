@@ -36,14 +36,14 @@ export function WhyNow() {
 
       <Stagger
         as="ul"
-        className="mt-16 grid grid-cols-1 border-t border-paper/15 sm:grid-cols-2 lg:grid-cols-3"
+        className="mt-16 grid grid-cols-1 gap-x-12 border-t border-paper/15 sm:grid-cols-2 lg:grid-cols-3"
         amount={0.07}
       >
         {tailwinds.map((w) => (
           <StaggerItem
             as="li"
             key={w.t}
-            className="border-b border-paper/10 py-8 sm:px-7 sm:[&:nth-child(odd)]:pl-0 lg:[&:nth-child(3n+1)]:pl-0 lg:[&:not(:nth-child(3n))]:border-r lg:border-paper/10"
+            className="border-b border-paper/10 py-8"
           >
             <p className="font-display text-3xl font-medium text-marigold sm:text-4xl">
               {w.k}

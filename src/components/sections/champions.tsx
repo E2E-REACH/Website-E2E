@@ -2,6 +2,7 @@ import { Bike, GraduationCap, TrendingUp, ArrowUpRight } from "lucide-react";
 import { Section, Kicker, Display, Lead, Em } from "@/components/ui/section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -64,6 +65,14 @@ export function Champions() {
           </Reveal>
         </div>
       </div>
+
+      <Reveal delay={0.05}>
+        <ImagePlaceholder
+          className="mt-12 aspect-[16/7] w-full"
+          label="The faces of the network"
+          brief="A group of women Well-being Champions in a community setting — confident, mid-conversation with residents; hopeful, documentary photography."
+        />
+      </Reveal>
 
       {/* Progression ladder */}
       <Stagger as="ol" className="mt-14">

@@ -8,6 +8,7 @@ export const siteConfig = {
   ctaSecondary: { label: "Explore the platform", href: "#platform" },
   ctaChampion: { label: "Join as a Champion", href: "#contact" },
   nav: [
+    { label: "How it works", href: "#how" },
     { label: "Platform", href: "#platform" },
     { label: "Verticals", href: "#verticals" },
     { label: "Network", href: "#network" },

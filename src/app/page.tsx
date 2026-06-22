@@ -1,5 +1,6 @@
 import { SiteNav } from "@/components/sections/site-nav";
 import { Hero } from "@/components/sections/hero";
+import { HowOnGround } from "@/components/sections/how-on-ground";
 import { TheGap } from "@/components/sections/the-gap";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Sectors } from "@/components/sections/sectors";
@@ -20,6 +21,7 @@ export default function Home() {
       <SiteNav />
       <main className="flex-1">
         <Hero />
+        <HowOnGround />
         <TheGap />
         <HowItWorks />
         <Sectors />

@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 import { CtaButton } from "@/components/ui/cta-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { MovingGlow } from "@/components/ui/moving-glow";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { Reveal, RevealMask } from "@/components/ui/reveal";
 import { Em } from "@/components/ui/section";
 
@@ -30,43 +31,55 @@ export function Hero() {
       <AuroraBackground className="-z-[8]" />
       <div aria-hidden className="absolute inset-0 -z-[7] bg-node-grid opacity-30" />
 
-      <div className="mx-auto flex w-full max-w-[88rem] flex-1 flex-col justify-center px-5 pt-28 pb-10 sm:px-8 lg:pt-32">
-        <Reveal>
-          <p className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-paper/70">
-            <span className="text-marigold">Ecosystem commerce</span>
-            <span className="h-px w-10 bg-paper/30" aria-hidden />
-            India&apos;s last mile
-          </p>
-        </Reveal>
+      <div className="mx-auto grid w-full max-w-[88rem] flex-1 grid-cols-1 items-center gap-12 px-5 pt-28 pb-10 sm:px-8 lg:grid-cols-[1.06fr_0.94fr] lg:pt-32">
+        <div>
+          <Reveal>
+            <p className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-paper/70">
+              <span className="text-marigold">Ecosystem commerce</span>
+              <span className="h-px w-10 bg-paper/30" aria-hidden />
+              India&apos;s last mile
+            </p>
+          </Reveal>
 
-        <h1 className="font-display mt-7 max-w-[15ch] text-[clamp(2.7rem,7.6vw,6.3rem)] font-medium leading-[0.99] text-balance">
-          <RevealMask delay={0.05}>India&apos;s last mile,</RevealMask>
-          <RevealMask delay={0.13} className="text-marigold">
-            <Em>finally within reach.</Em>
-          </RevealMask>
-        </h1>
+          <h1 className="font-display mt-7 max-w-[15ch] text-[clamp(2.7rem,6.6vw,5.6rem)] font-medium leading-[1.0] text-balance">
+            <RevealMask delay={0.05}>India&apos;s last mile,</RevealMask>
+            <RevealMask delay={0.13} className="text-marigold">
+              <Em>finally within reach.</Em>
+            </RevealMask>
+          </h1>
 
-        <Reveal delay={0.28} className="mt-8 max-w-xl">
-          <p className="text-lg leading-relaxed text-paper/80 text-pretty sm:text-xl">
-            e2E Reach turns community trust into national infrastructure — a
-            living, trusted network that carries commerce, finance, healthcare
-            and government schemes to the doorstep of the 900 million Indians the
-            formal economy can&apos;t yet reach.
-          </p>
-        </Reveal>
+          <Reveal delay={0.28} className="mt-8 max-w-xl">
+            <p className="text-lg leading-relaxed text-paper/80 text-pretty">
+              e2E Reach brings banking, healthcare, insurance and government
+              schemes to India&apos;s villages and small towns — carried to the
+              doorstep by a trusted local person the community already knows,
+              mostly women. One network; the whole formal economy.
+            </p>
+          </Reveal>
 
-        <Reveal delay={0.38}>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <MovingGlow>
-              <CtaButton href={siteConfig.ctaPrimary.href} className="w-full">
-                {siteConfig.ctaPrimary.label}
-                <ArrowUpRight aria-hidden />
+          <Reveal delay={0.38}>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <MovingGlow>
+                <CtaButton href={siteConfig.ctaPrimary.href} className="w-full">
+                  {siteConfig.ctaPrimary.label}
+                  <ArrowUpRight aria-hidden />
+                </CtaButton>
+              </MovingGlow>
+              <CtaButton href={siteConfig.ctaSecondary.href} variant="ghost-light">
+                {siteConfig.ctaSecondary.label}
               </CtaButton>
-            </MovingGlow>
-            <CtaButton href={siteConfig.ctaSecondary.href} variant="ghost-light">
-              {siteConfig.ctaSecondary.label}
-            </CtaButton>
-          </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Signature photo (desktop) */}
+        <Reveal delay={0.2} className="hidden lg:block">
+          <ImagePlaceholder
+            tone="dark"
+            className="aspect-[4/5] w-full"
+            label="A Champion at the doorstep"
+            brief="A Well-being Champion — a woman — sitting with a rural family at their doorstep, showing them a tablet. Warm natural light, honest documentary style."
+          />
         </Reveal>
       </div>
 
@@ -83,11 +96,6 @@ export function Hero() {
               </div>
             ))}
           </dl>
-        </Reveal>
-        <Reveal delay={0.55}>
-          <p className="mt-4 hidden items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.2em] text-paper/45 sm:flex">
-            Scroll <ArrowDown className="size-3.5 animate-bounce" aria-hidden />
-          </p>
         </Reveal>
       </div>
     </section>
