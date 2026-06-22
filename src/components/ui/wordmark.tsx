@@ -18,22 +18,23 @@ export function Wordmark({
   return (
     <span
       className={cn(
-        "font-display font-semibold leading-none inline-flex items-baseline select-none tracking-[-0.02em]",
+        "font-display font-bold leading-none inline-flex items-baseline select-none tracking-[-0.05em]",
         base,
         className,
       )}
       aria-label="e2E Reach"
     >
-      <span className="text-[0.64em] font-normal italic opacity-80" aria-hidden>
+      {/* e2E steps up in size on a shared baseline → an ascending right triangle */}
+      <span className="text-[0.55em] opacity-90" aria-hidden>
         e
       </span>
-      <span className="text-marigold font-bold mx-[0.015em]" aria-hidden>
+      <span className="text-marigold text-[1em]" aria-hidden>
         2
       </span>
-      <span className="text-[1.16em] font-bold" aria-hidden>
+      <span className="text-[1.5em]" aria-hidden>
         E
       </span>
-      <span className="ml-[0.36em] font-sans text-[0.5em] font-semibold uppercase tracking-[0.18em] opacity-70" aria-hidden>
+      <span className="ml-[0.42em] font-sans text-[0.46em] font-semibold uppercase tracking-[0.18em] opacity-70" aria-hidden>
         Reach
       </span>
     </span>

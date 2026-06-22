@@ -47,17 +47,15 @@ export function Earnings({ t }: { t: Dict["livelihoods"] }) {
             {t.streams.map((s) => (
               <StaggerItem
                 key={s.title}
-                className="flex items-baseline justify-between gap-6 border-b border-paper/10 py-5"
+                className="flex items-baseline gap-4 border-b border-paper/10 py-5"
               >
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-marigold" aria-hidden />
                 <div className="min-w-0">
                   <h3 className="font-display text-xl font-medium text-paper">
                     {s.title}
                   </h3>
                   <p className="mt-1 text-sm text-paper/60">{s.note}</p>
                 </div>
-                <span className="shrink-0 font-mono text-lg font-bold text-marigold">
-                  {s.figure}
-                </span>
               </StaggerItem>
             ))}
           </Stagger>

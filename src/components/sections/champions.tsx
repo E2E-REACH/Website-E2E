@@ -71,19 +71,9 @@ export function Champions({ t, cta }: { t: Dict["network"]; cta: Dict["cta"] }) 
                 </span>
               </div>
               <div className="max-w-2xl">
-                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                  <h3 className="font-display text-2xl font-medium text-ink sm:text-3xl">
-                    {p.title}
-                  </h3>
-                  <span
-                    className={cn(
-                      "font-mono text-xs uppercase tracking-[0.14em]",
-                      m.peak ? "text-marigold-ink" : "text-ink-soft/70",
-                    )}
-                  >
-                    {p.earns}
-                  </span>
-                </div>
+                <h3 className="font-display text-2xl font-medium text-ink sm:text-3xl">
+                  {p.title}
+                </h3>
                 <p className="mt-3 text-base leading-relaxed text-ink-soft">
                   {p.body}
                 </p>
