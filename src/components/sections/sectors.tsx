@@ -2,7 +2,7 @@ import {
   ScrollText,
   Landmark,
   HeartPulse,
-  Scale,
+  Sun,
   Sprout,
   ShoppingBag,
 } from "lucide-react";
@@ -15,7 +15,7 @@ const meta = [
   { icon: ScrollText, span: "sm:col-span-2 lg:col-span-2", feature: true },
   { icon: Landmark, span: "lg:col-span-1", feature: false },
   { icon: HeartPulse, span: "lg:col-span-1", feature: false },
-  { icon: Scale, span: "lg:col-span-1", feature: false },
+  { icon: Sun, span: "lg:col-span-1", feature: false },
   { icon: Sprout, span: "lg:col-span-1", feature: false },
   { icon: ShoppingBag, span: "sm:col-span-2 lg:col-span-2", feature: true },
 ];

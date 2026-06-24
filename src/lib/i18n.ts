@@ -33,17 +33,17 @@ const en = {
   },
   hero: {
     kickerA: "Ecosystem commerce",
-    kickerB: "India's last mile",
-    titleA: "India's last mile,",
+    kickerB: "the last mile, everywhere",
+    titleA: "The last mile,",
     titleB: "finally within reach.",
-    sub: "e2E Reach brings banking, healthcare, insurance and government schemes to India's villages and small towns — carried to the doorstep by a trusted local person the community already knows, mostly women. One network; the whole formal economy.",
+    sub: "Technology democratised information — but not access to goods and services. e2E Reach is the trusted human layer that lets commerce, finance, healthcare, energy and government finally reach the world's underserved communities. Starting in India, built for the world — carried by trusted local people, mostly women.",
     photoAlt:
-      "A Well-being Champion shows a tablet to a rural family at their doorstep in the warm evening light.",
+      "A Well-being Champion shows a tablet to a family at their doorstep in the warm evening light.",
     signals: [
-      { v: "900M", l: "underserved Indians" },
+      { v: "900M", l: "underserved in India — billions worldwide" },
       { v: "800M+", l: "mobile users, yet unreached" },
       { v: "200+", l: "welfare schemes to deliver" },
-      { v: "Last-mile", l: "built on India's digital rails" },
+      { v: "Global", l: "starting in India, built for the world" },
     ],
   },
   how: {
@@ -63,16 +63,16 @@ const en = {
   },
   gap: {
     kicker: "The opportunity",
-    h: "The bottleneck isn't demand. It's",
-    hEm: "trusted reach.",
-    lead: "Commerce, insurance, credit, healthcare and welfare all have vast addressable markets at India's last mile. Value can't flow because rural, semi-urban and underserved communities need human intermediaries who carry credibility — not just connectivity.",
+    h: "Technology opened up information —",
+    hEm: "not goods and services.",
+    lead: "Tech platforms can scale to billions, then stall at the last mile — where people need a trusted human, not just a signal. The gap isn't demand or connectivity; it's trusted intermediation between the markets that have access and the ones that don't.",
     pullA: "Community trust is a ",
     pullEm: "market-based asset",
     pullB: " — freely available, and largely untapped.",
     stats: [
-      { value: "67%", label: "of India remains chronically underserved, despite smartphones" },
-      { value: "₹3–5k", label: "to acquire one customer the old way — economically unviable at the last mile" },
-      { value: "The missing middle", label: "economically viable, yet operationally unreachable" },
+      { value: "Billions", label: "cut off from formal goods & services worldwide" },
+      { value: "Not demand", label: "the bottleneck is trusted reach, not appetite" },
+      { value: "The missing middle", label: "viable to serve, until now impossible to reach" },
     ],
   },
   platform: {
@@ -93,13 +93,13 @@ const en = {
     kicker: "The verticals",
     h: "Six ecosystems,",
     hEm: "one trusted doorstep.",
-    lead: "Each vertical runs on its own playbook — but arrives through the same trusted person. One relationship, the whole formal economy.",
+    lead: "Each vertical runs on its own playbook — but arrives through the same trusted person. Any service that needs the last mile can run on the network: finance, health, energy, commerce, government and more.",
     items: [
       { title: "Government schemes & entitlements", body: "200+ welfare programmes, subsidies and entitlements — finally reaching the families they were written for, with assisted enrolment and documentation." },
       { title: "Financial services", body: "Mutual funds, insurance, credit and savings — with the literacy to use them." },
       { title: "Health services", body: "Telemedicine, health insurance and preventive care at the doorstep." },
-      { title: "Legal services", body: "Documentation, advisory and dispute resolution made accessible." },
-      { title: "Supply-side aggregation", body: "Rural producers reach wider markets; bulk procurement for the network." },
+      { title: "Renewable & clean energy", body: "Solar and clean-energy products — financed, sold and serviced at the doorstep." },
+      { title: "Supply-side aggregation", body: "Local producers reach wider markets; bulk procurement for the network." },
       { title: "Marketplace access via ONDC", body: "Community group-buying on open networks — volume pricing and consolidated logistics, inspired by the Pinduoduo model." },
     ],
   },
@@ -146,7 +146,7 @@ const en = {
     kicker: "The architecture",
     h: "Built on India's own",
     hEm: "digital rails.",
-    lead: "A country-as-a-platform approach — engineered to plug into national infrastructure and meet its rules, so trust becomes the currency.",
+    lead: "A country-as-a-platform approach — engineered to plug into each market's national digital infrastructure, starting with India's, so trust becomes the currency.",
     rails: [
       { title: "India's digital public infrastructure", body: "Designed to integrate with Aadhaar, UPI and DigiLocker — the rails the country already runs on.", tags: ["Aadhaar", "UPI", "DigiLocker"] },
       { title: "Open networks", body: "ONDC for open commerce and the Account Aggregator framework for consented financial data flows.", tags: ["ONDC", "Account Aggregator"] },
@@ -199,12 +199,12 @@ const en = {
   india: {
     kicker: "Built for scale",
     h: "From one district to the",
-    hEm: "whole country.",
-    lead: "We start where there's a real community need, prove it works, then replicate — a scalable template for India's underserved geographies, built district by district.",
+    hEm: "whole world.",
+    lead: "We prove the model district by district in India — then replicate, market by market, across the world's underserved geographies. A repeatable template for any last mile, anywhere.",
     points: [
       "Prove the unit economics in one district",
-      "Replicate the playbook to the next",
-      "District-level coordination infrastructure",
+      "Replicate across India — then the world",
+      "A repeatable template for any underserved market",
     ],
     photoAlt:
       "A map of India glowing with warm nodes across states and districts, joined by faint connecting lines.",
@@ -237,7 +237,7 @@ const en = {
   },
   finalCta: {
     kickerA: "Ecosystem commerce",
-    kickerB: "India's last mile",
+    kickerB: "the last mile, everywhere",
     line1: "Community trust is a",
     line2: "market-based asset.",
     line3: "Activate it. Scale it. Compound it.",
@@ -245,8 +245,8 @@ const en = {
   },
   footer: {
     explainer:
-      "Building India's trusted last-mile ecosystem for commerce, finance, health and livelihoods.",
-    tagline: "Ecosystem commerce for India's last mile.",
+      "Building the world's trusted last-mile ecosystem for commerce, finance, health and livelihoods — starting in India.",
+    tagline: "Ecosystem commerce for the last mile.",
     explore: "Explore",
     getInTouch: "Get in touch",
     getInTouchNote: "For partnership, investment and ecosystem enablement.",
@@ -276,17 +276,17 @@ const hi: Dict = {
   },
   hero: {
     kickerA: "इकोसिस्टम कॉमर्स",
-    kickerB: "भारत का अंतिम छोर",
-    titleA: "भारत का अंतिम छोर,",
+    kickerB: "अंतिम छोर, हर जगह",
+    titleA: "अंतिम छोर,",
     titleB: "अब पहुँच में।",
-    sub: "e2E Reach बैंकिंग, स्वास्थ्य, बीमा और सरकारी योजनाओं को भारत के गाँवों और कस्बों तक पहुँचाता है — एक भरोसेमंद स्थानीय व्यक्ति के ज़रिए, जिसे समुदाय पहले से जानता है, और जो ज़्यादातर महिलाएँ हैं। एक नेटवर्क; पूरी औपचारिक अर्थव्यवस्था।",
+    sub: "तकनीक ने जानकारी तक पहुँच तो दी — पर वस्तुओं और सेवाओं तक नहीं। e2E Reach वह भरोसेमंद मानवीय परत है जो वाणिज्य, वित्त, स्वास्थ्य, ऊर्जा और सरकारी सेवाओं को दुनिया के वंचित समुदायों तक पहुँचाती है। भारत से शुरुआत, दुनिया के लिए निर्मित — भरोसेमंद स्थानीय लोगों के ज़रिए, ज़्यादातर महिलाएँ।",
     photoAlt:
-      "एक कल्याण चैंपियन शाम की गर्म रोशनी में एक ग्रामीण परिवार को घर के दरवाज़े पर टैबलेट दिखाती हुई।",
+      "एक कल्याण चैंपियन शाम की गर्म रोशनी में एक परिवार को घर के दरवाज़े पर टैबलेट दिखाती हुई।",
     signals: [
-      { v: "900M", l: "वंचित भारतीय" },
+      { v: "900M", l: "भारत में वंचित — दुनिया भर में अरबों" },
       { v: "800M+", l: "मोबाइल उपयोगकर्ता, फिर भी अनछुए" },
       { v: "200+", l: "पहुँचाने योग्य कल्याण योजनाएँ" },
-      { v: "अंतिम छोर", l: "भारत की डिजिटल रेल पर निर्मित" },
+      { v: "वैश्विक", l: "भारत से शुरू, दुनिया के लिए निर्मित" },
     ],
   },
   how: {
@@ -306,16 +306,16 @@ const hi: Dict = {
   },
   gap: {
     kicker: "अवसर",
-    h: "रुकावट माँग नहीं है। रुकावट है",
-    hEm: "भरोसेमंद पहुँच।",
-    lead: "वाणिज्य, बीमा, ऋण, स्वास्थ्य और कल्याण — सबके लिए भारत के अंतिम छोर पर विशाल बाज़ार मौजूद है। मूल्य प्रवाहित नहीं हो पाता क्योंकि ग्रामीण, अर्ध-शहरी और वंचित समुदायों को ऐसे मानवीय मध्यस्थ चाहिए जो विश्वसनीयता रखते हों — केवल कनेक्टिविटी नहीं।",
+    h: "तकनीक ने जानकारी तो खोली —",
+    hEm: "वस्तुएँ-सेवाएँ नहीं।",
+    lead: "तकनीकी प्लेटफ़ॉर्म अरबों तक बढ़ सकते हैं, पर अंतिम छोर पर ठहर जाते हैं — जहाँ लोगों को सिर्फ़ सिग्नल नहीं, एक भरोसेमंद इंसान चाहिए। कमी न माँग की है, न कनेक्टिविटी की — कमी है भरोसेमंद मध्यस्थता की, उन बाज़ारों के बीच जिनकी पहुँच है और जिनकी नहीं।",
     pullA: "समुदाय का भरोसा एक ",
     pullEm: "बाज़ार-आधारित संपत्ति",
     pullB: " है — सहज उपलब्ध, और काफ़ी हद तक अनुपयोगी।",
     stats: [
-      { value: "67%", label: "भारत स्मार्टफ़ोन के बावजूद दीर्घकालिक रूप से वंचित है" },
-      { value: "₹3–5k", label: "पुराने तरीके से एक ग्राहक जोड़ने की लागत — अंतिम छोर पर अव्यवहार्य" },
-      { value: "अनदेखा मध्यवर्ग", label: "आर्थिक रूप से व्यवहार्य, फिर भी परिचालन में अगम्य" },
+      { value: "अरबों", label: "दुनिया भर में औपचारिक वस्तुओं-सेवाओं से कटे हुए" },
+      { value: "माँग नहीं", label: "रुकावट भरोसेमंद पहुँच है, इच्छा नहीं" },
+      { value: "अनदेखा मध्यवर्ग", label: "सेवा-योग्य, पर अब तक अगम्य" },
     ],
   },
   platform: {
@@ -336,13 +336,13 @@ const hi: Dict = {
     kicker: "सेक्टर",
     h: "छह इकोसिस्टम,",
     hEm: "एक भरोसेमंद दरवाज़ा।",
-    lead: "हर सेक्टर का अपना तरीका है — पर वह एक ही भरोसेमंद व्यक्ति के ज़रिए पहुँचता है। एक रिश्ता, पूरी औपचारिक अर्थव्यवस्था।",
+    lead: "हर सेक्टर का अपना तरीका है — पर वह एक ही भरोसेमंद व्यक्ति के ज़रिए पहुँचता है। कोई भी सेवा जिसे अंतिम छोर चाहिए, इस नेटवर्क पर चल सकती है: वित्त, स्वास्थ्य, ऊर्जा, वाणिज्य, सरकार और बहुत कुछ।",
     items: [
       { title: "सरकारी योजनाएँ व अधिकार", body: "200+ कल्याण योजनाएँ, सब्सिडी और अधिकार — सहायता-युक्त नामांकन व दस्तावेज़ीकरण के साथ उन परिवारों तक जिनके लिए वे बनी थीं।" },
       { title: "वित्तीय सेवाएँ", body: "म्यूचुअल फंड, बीमा, ऋण और बचत — उन्हें उपयोग करने की समझ के साथ।" },
       { title: "स्वास्थ्य सेवाएँ", body: "टेलीमेडिसिन, स्वास्थ्य बीमा और निवारक देखभाल, घर के दरवाज़े पर।" },
-      { title: "कानूनी सेवाएँ", body: "दस्तावेज़, सलाह और विवाद समाधान — सुलभ बनाए गए।" },
-      { title: "आपूर्ति-पक्ष एकत्रीकरण", body: "ग्रामीण उत्पादक बड़े बाज़ारों तक; नेटवर्क के लिए थोक खरीद।" },
+      { title: "नवीकरणीय व स्वच्छ ऊर्जा", body: "सौर व स्वच्छ-ऊर्जा उत्पाद — घर के दरवाज़े पर वित्त, बिक्री और सेवा के साथ।" },
+      { title: "आपूर्ति-पक्ष एकत्रीकरण", body: "स्थानीय उत्पादक बड़े बाज़ारों तक; नेटवर्क के लिए थोक खरीद।" },
       { title: "ओएनडीसी के ज़रिए मार्केटप्लेस", body: "ओपन नेटवर्क पर सामुदायिक समूह-खरीद — पिनदुओदुओ मॉडल से प्रेरित, बेहतर मूल्य और संयुक्त लॉजिस्टिक्स।" },
     ],
   },
@@ -389,7 +389,7 @@ const hi: Dict = {
     kicker: "आर्किटेक्चर",
     h: "भारत की अपनी",
     hEm: "डिजिटल रेल पर निर्मित।",
-    lead: "एक 'कंट्री-एज़-ए-प्लेटफ़ॉर्म' दृष्टिकोण — राष्ट्रीय अवसंरचना से जुड़ने और उसके नियमों का पालन करने के लिए बनाया गया, ताकि भरोसा ही मुद्रा बन जाए।",
+    lead: "एक 'कंट्री-एज़-ए-प्लेटफ़ॉर्म' दृष्टिकोण — हर बाज़ार की राष्ट्रीय डिजिटल अवसंरचना से जुड़ने के लिए बनाया गया, भारत से शुरुआत, ताकि भरोसा ही मुद्रा बन जाए।",
     rails: [
       { title: "भारत की डिजिटल पब्लिक इन्फ़्रास्ट्रक्चर", body: "आधार, यूपीआई और डिजीलॉकर के साथ एकीकरण के लिए डिज़ाइन — वही रेल जिन पर देश पहले से चलता है।", tags: ["आधार", "यूपीआई", "डिजीलॉकर"] },
       { title: "ओपन नेटवर्क", body: "ओपन कॉमर्स के लिए ओएनडीसी और सहमति-आधारित वित्तीय डेटा के लिए अकाउंट एग्रीगेटर ढाँचा।", tags: ["ओएनडीसी", "अकाउंट एग्रीगेटर"] },
@@ -442,12 +442,12 @@ const hi: Dict = {
   india: {
     kicker: "पैमाने के लिए निर्मित",
     h: "एक ज़िले से लेकर",
-    hEm: "पूरे देश तक।",
-    lead: "हम वहाँ शुरू करते हैं जहाँ वास्तविक सामुदायिक ज़रूरत हो, उसे सिद्ध करते हैं, फिर दोहराते हैं — भारत के वंचित क्षेत्रों के लिए एक विस्तार-योग्य ढाँचा, ज़िला-दर-ज़िला।",
+    hEm: "पूरी दुनिया तक।",
+    lead: "हम भारत में ज़िला-दर-ज़िला मॉडल सिद्ध करते हैं — फिर बाज़ार-दर-बाज़ार, दुनिया के वंचित क्षेत्रों में दोहराते हैं। किसी भी अंतिम छोर के लिए एक दोहराने-योग्य ढाँचा।",
     points: [
       "एक ज़िले में इकाई-अर्थशास्त्र सिद्ध करें",
-      "अगले में उसी प्लेबुक को दोहराएँ",
-      "ज़िला-स्तरीय समन्वय अवसंरचना",
+      "भारत भर में दोहराएँ — फिर दुनिया में",
+      "किसी भी वंचित बाज़ार के लिए दोहराने-योग्य ढाँचा",
     ],
     photoAlt:
       "भारत का नक्शा, राज्यों और ज़िलों में गर्म नोड्स के साथ चमकता हुआ, हल्की रेखाओं से जुड़ा।",
@@ -480,7 +480,7 @@ const hi: Dict = {
   },
   finalCta: {
     kickerA: "इकोसिस्टम कॉमर्स",
-    kickerB: "भारत का अंतिम छोर",
+    kickerB: "अंतिम छोर, हर जगह",
     line1: "समुदाय का भरोसा एक",
     line2: "बाज़ार-आधारित संपत्ति है।",
     line3: "इसे सक्रिय करें। बढ़ाएँ। चक्रवृद्धि करें।",
@@ -488,8 +488,8 @@ const hi: Dict = {
   },
   footer: {
     explainer:
-      "वाणिज्य, वित्त, स्वास्थ्य और आजीविका के लिए भारत का भरोसेमंद अंतिम-छोर इकोसिस्टम बना रहे हैं।",
-    tagline: "भारत के अंतिम छोर के लिए इकोसिस्टम कॉमर्स।",
+      "वाणिज्य, वित्त, स्वास्थ्य और आजीविका के लिए दुनिया का भरोसेमंद अंतिम-छोर इकोसिस्टम बना रहे हैं — भारत से शुरुआत।",
+    tagline: "अंतिम छोर के लिए इकोसिस्टम कॉमर्स।",
     explore: "देखें",
     getInTouch: "संपर्क करें",
     getInTouchNote: "साझेदारी, निवेश और इकोसिस्टम सक्षमता के लिए।",

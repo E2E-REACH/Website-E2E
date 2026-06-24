@@ -53,9 +53,9 @@ const mukta = Mukta({
 });
 
 export const metadata: Metadata = {
-  title: "e2E Reach — India's trusted last-mile ecosystem",
+  title: "e2E Reach — Ecosystem commerce for the last mile",
   description:
-    "e2E Reach turns community trust into national infrastructure — a living, trusted network carrying commerce, finance, healthcare and government schemes to the 900 million Indians the formal economy can't yet reach. Built on India's digital rails.",
+    "Technology democratised information, not access to goods and services. e2E Reach is the trusted human layer that carries commerce, finance, healthcare, energy and government services to the world's underserved communities — starting in India.",
 };
 
 export default async function RootLayout({
