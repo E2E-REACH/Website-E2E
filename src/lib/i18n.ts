@@ -36,7 +36,7 @@ const en = {
     kickerB: "the last mile, everywhere",
     titleA: "The last mile,",
     titleB: "finally within reach.",
-    sub: "Technology democratised information — but not access to goods and services. e2E Reach is the trusted human layer that lets commerce, finance, healthcare, energy and government finally reach the world's underserved communities. Starting in India, built for the world — carried by trusted local people, mostly women.",
+    sub: "Technology democratised information — but not access to goods and services. e2E Reach is the trusted human layer that lets commerce, finance, healthcare, energy and government finally reach the world's underserved communities. Starting in India, built for the world — carried by trusted people the community already knows.",
     photoAlt:
       "A Well-being Champion shows a tablet to a family at their doorstep in the warm evening light.",
     signals: [
@@ -53,9 +53,9 @@ const en = {
     lead: "No jargon. e2E Reach connects the formal economy to communities it can't reach today — through one trusted person who carries many services to the door.",
     stepsLabel: "four simple steps",
     photoAlt:
-      "A woman Well-being Champion guiding a family through a service on a tablet at their home in rural India.",
+      "A Well-being Champion guiding a family through a service on a tablet at their home.",
     steps: [
-      { n: "01", title: "A trusted local person joins", body: "They become a Well-being Champion — most are women, already known and trusted by their neighbours." },
+      { n: "01", title: "A trusted local person joins", body: "They become a Well-being Champion — someone already known and trusted by their neighbours." },
       { n: "02", title: "We train and equip them", body: "One simple app for many services, hands-on training, payments and ongoing support — no capital needed from them." },
       { n: "03", title: "They carry it to the doorstep", body: "Banking, health, insurance and government schemes — explained face-to-face, in the local language, where people live." },
       { n: "04", title: "Everyone gains", body: "Families get access they never had, Champions earn a real livelihood, and partners finally reach the last mile." },
@@ -107,9 +107,9 @@ const en = {
     kicker: "The network",
     h: "The engine that makes it all",
     hEm: "flow.",
-    lead: "Well-being Champions are the validators and catalysts embedded in every community — mostly women, already trusted by their neighbours. One trained Champion can serve 200–500 households, and grows along a clear ladder.",
+    lead: "Well-being Champions are the validators and catalysts embedded in every community — deeply trusted by their neighbours, living where they serve. One trained Champion can serve 200–500 households, and grows along a clear ladder.",
     photoAlt:
-      "Five women Well-being Champions of different ages stand together in a village lane at golden hour, some holding tablets and folders.",
+      "Well-being Champions of different ages stand together in a community lane at golden hour, some holding tablets and folders.",
     personas: [
       { title: "Gig Champion", earns: "Task-based", body: "App-led execution — deliveries, surveys, referrals, data collection, document verification." },
       { title: "Knowledge Champion", earns: "₹20,000–30,000 / mo", body: "Consumer education, category fluency and community trust-building — financial-literacy and awareness programs." },
@@ -120,7 +120,7 @@ const en = {
       "Heartfulness networks",
       "ASHA workers",
       "Anganwadi workers",
-      "Women's cooperatives & federations",
+      "Cooperatives & federations",
       "Sansthas & NGOs",
       "Retired armed forces",
     ],
@@ -129,7 +129,7 @@ const en = {
     kicker: "Livelihoods",
     h: "Dignified income —",
     hEm: "created at the last mile.",
-    lead: "Every participant stacks multiple income streams into a meaningful livelihood — building employability, standing and women's economic participation along the way.",
+    lead: "Every participant stacks multiple income streams into a meaningful livelihood — building employability, standing and economic inclusion along the way.",
     aspirationLabel: "Platform aspiration",
     aspirationValue: "₹40–50k",
     aspirationSuffix: "/ month",
@@ -178,7 +178,7 @@ const en = {
     lead: "The same infrastructure that moves commerce also moves inclusion — measurable outcomes for people, communities and the system as a whole.",
     pillars: [
       { title: "Economic", points: ["Sustainable livelihoods at the last mile", "Higher income for micro-entrepreneurs", "Improved financial access for communities"] },
-      { title: "Social", points: ["Strengthened social capital & trust networks", "Life- and employability-skill upskilling", "Women's economic empowerment"] },
+      { title: "Social", points: ["Strengthened social capital & trust networks", "Life- and employability-skill upskilling", "Inclusive economic empowerment"] },
       { title: "Systemic", points: ["Deepened financial & healthcare inclusion", "A scalable template for underserved geographies", "District-level coordination infrastructure"] },
     ],
   },
@@ -231,7 +231,7 @@ const en = {
       { q: "How is this different from a gig or delivery platform?", a: "Gig platforms optimise for transactions; we build for trust and depth. A single Champion holds a long-term relationship with 200–500 households across many services — relationship capital, not one-off deliveries." },
       { q: "How do you maintain trust, privacy and regulatory compliance?", a: "By design. The platform is engineered to integrate with India's digital public infrastructure, embeds RBI/SEBI/IRDA/GST rules as configurable policy, is built to be DPDP-compliant with consent management, and uses a permissioned-blockchain trust layer with audit trails and vKYC checks." },
       { q: "How do you scale without owning inventory or employees?", a: "An asset-light, hub-and-spoke model: a lean central hub, regional partners who activate existing community networks, and Champions who invest time and relationships — not capital. Unit economics are proven at district level before expanding." },
-      { q: "Who becomes a Well-being Champion — and is there a joining fee?", a: "Trusted local people — mostly women — recruited from existing networks such as ASHA and Anganwadi workers, women's cooperatives, Heartfulness volunteers and ex-armed-forces. No degree or prior experience is required. [PLACEHOLDER: state the intended joining-fee policy. TODO: confirm before launch.]" },
+      { q: "Who becomes a Well-being Champion — and is there a joining fee?", a: "Trusted local people, embedded in their communities, recruited from existing networks such as ASHA and Anganwadi workers, cooperatives, Heartfulness volunteers and ex-armed-forces. No degree or prior experience is required. [PLACEHOLDER: state the intended joining-fee policy. TODO: confirm before launch.]" },
       { q: "How can our organisation partner with e2E Reach?", a: "As a strategic partner (brands, fintech, financial, healthcare, energy, logistics), an impact investor, or an ecosystem enabler (technology, training, government programmes). Write to information@e2ereach.com to start a conversation." },
     ],
   },
@@ -279,7 +279,7 @@ const hi: Dict = {
     kickerB: "अंतिम छोर, हर जगह",
     titleA: "अंतिम छोर,",
     titleB: "अब पहुँच में।",
-    sub: "तकनीक ने जानकारी तक पहुँच तो दी — पर वस्तुओं और सेवाओं तक नहीं। e2E Reach वह भरोसेमंद मानवीय परत है जो वाणिज्य, वित्त, स्वास्थ्य, ऊर्जा और सरकारी सेवाओं को दुनिया के वंचित समुदायों तक पहुँचाती है। भारत से शुरुआत, दुनिया के लिए निर्मित — भरोसेमंद स्थानीय लोगों के ज़रिए, ज़्यादातर महिलाएँ।",
+    sub: "तकनीक ने जानकारी तक पहुँच तो दी — पर वस्तुओं और सेवाओं तक नहीं। e2E Reach वह भरोसेमंद मानवीय परत है जो वाणिज्य, वित्त, स्वास्थ्य, ऊर्जा और सरकारी सेवाओं को दुनिया के वंचित समुदायों तक पहुँचाती है। भारत से शुरुआत, दुनिया के लिए निर्मित — उन भरोसेमंद स्थानीय लोगों के ज़रिए जिन्हें समुदाय पहले से जानता है।",
     photoAlt:
       "एक कल्याण चैंपियन शाम की गर्म रोशनी में एक परिवार को घर के दरवाज़े पर टैबलेट दिखाती हुई।",
     signals: [
@@ -296,9 +296,9 @@ const hi: Dict = {
     lead: "कोई जटिल भाषा नहीं। e2E Reach औपचारिक अर्थव्यवस्था को उन समुदायों से जोड़ता है जहाँ वह आज नहीं पहुँच पाती — एक भरोसेमंद व्यक्ति के ज़रिए जो कई सेवाएँ घर तक लाता है।",
     stepsLabel: "चार सरल कदम",
     photoAlt:
-      "एक महिला कल्याण चैंपियन ग्रामीण भारत में एक परिवार को उनके घर पर टैबलेट पर सेवा समझाती हुई।",
+      "एक कल्याण चैंपियन एक परिवार को उनके घर पर टैबलेट पर सेवा समझाते हुए।",
     steps: [
-      { n: "01", title: "एक भरोसेमंद स्थानीय व्यक्ति जुड़ता है", body: "वे कल्याण चैंपियन बनते हैं — ज़्यादातर महिलाएँ, जिन्हें पड़ोसी पहले से जानते और भरोसा करते हैं।" },
+      { n: "01", title: "एक भरोसेमंद स्थानीय व्यक्ति जुड़ता है", body: "वे कल्याण चैंपियन बनते हैं — कोई ऐसा व्यक्ति जिसे पड़ोसी पहले से जानते और भरोसा करते हैं।" },
       { n: "02", title: "हम उन्हें प्रशिक्षण और साधन देते हैं", body: "कई सेवाओं के लिए एक सरल ऐप, व्यावहारिक प्रशिक्षण, भुगतान और निरंतर सहयोग — उन्हें कोई पूँजी नहीं लगानी पड़ती।" },
       { n: "03", title: "वे इसे घर के दरवाज़े तक लाते हैं", body: "बैंकिंग, स्वास्थ्य, बीमा और सरकारी योजनाएँ — आमने-सामने, स्थानीय भाषा में, वहीं जहाँ लोग रहते हैं।" },
       { n: "04", title: "सबको लाभ होता है", body: "परिवारों को वह पहुँच मिलती है जो पहले कभी नहीं थी, चैंपियनों को सच्ची आजीविका मिलती है, और साझेदार अंततः अंतिम छोर तक पहुँचते हैं।" },
@@ -350,9 +350,9 @@ const hi: Dict = {
     kicker: "नेटवर्क",
     h: "वह इंजन जो सब कुछ",
     hEm: "चलाता है।",
-    lead: "कल्याण चैंपियन हर समुदाय में बसे सत्यापनकर्ता और उत्प्रेरक हैं — ज़्यादातर महिलाएँ, जिन पर पड़ोसी पहले से भरोसा करते हैं। एक प्रशिक्षित चैंपियन 200–500 परिवारों की सेवा कर सकती है, और एक स्पष्ट सीढ़ी पर आगे बढ़ती है।",
+    lead: "कल्याण चैंपियन हर समुदाय में बसे सत्यापनकर्ता और उत्प्रेरक हैं — जिन पर पड़ोसी पहले से गहरा भरोसा करते हैं, और जो वहीं रहते हैं जहाँ सेवा देते हैं। एक प्रशिक्षित चैंपियन 200–500 परिवारों की सेवा कर सकता है, और एक स्पष्ट सीढ़ी पर आगे बढ़ता है।",
     photoAlt:
-      "अलग-अलग उम्र की पाँच महिला कल्याण चैंपियन सुनहरी रोशनी में एक गाँव की गली में एक साथ खड़ी हैं।",
+      "अलग-अलग उम्र के कल्याण चैंपियन सुनहरी रोशनी में एक समुदाय की गली में एक साथ खड़े हैं।",
     personas: [
       { title: "गिग चैंपियन", earns: "कार्य-आधारित", body: "ऐप-आधारित कार्य — डिलीवरी, सर्वे, रेफ़रल, डेटा संग्रह, दस्तावेज़ सत्यापन।" },
       { title: "ज्ञान चैंपियन", earns: "₹20,000–30,000 / माह", body: "उपभोक्ता शिक्षा, श्रेणी-दक्षता और समुदाय में भरोसा — वित्तीय-साक्षरता व जागरूकता कार्यक्रम।" },
@@ -363,7 +363,7 @@ const hi: Dict = {
       "हार्टफुलनेस नेटवर्क",
       "आशा कार्यकर्ता",
       "आंगनवाड़ी कार्यकर्ता",
-      "महिला सहकारी व महासंघ",
+      "सहकारी समितियाँ व महासंघ",
       "संस्थाएँ व एनजीओ",
       "सेवानिवृत्त सशस्त्र बल",
     ],
@@ -372,7 +372,7 @@ const hi: Dict = {
     kicker: "आजीविका",
     h: "सम्मानजनक आय —",
     hEm: "अंतिम छोर पर बनी।",
-    lead: "हर भागीदार कई आय-स्रोतों को जोड़कर एक सार्थक आजीविका बनाता है — साथ ही रोज़गार-योग्यता, सम्मान और महिलाओं की आर्थिक भागीदारी भी।",
+    lead: "हर भागीदार कई आय-स्रोतों को जोड़कर एक सार्थक आजीविका बनाता है — साथ ही रोज़गार-योग्यता, सम्मान और आर्थिक समावेशन भी।",
     aspirationLabel: "प्लेटफ़ॉर्म की आकांक्षा",
     aspirationValue: "₹40–50k",
     aspirationSuffix: "/ माह",
@@ -421,7 +421,7 @@ const hi: Dict = {
     lead: "वही अवसंरचना जो वाणिज्य को गति देती है, समावेशन को भी आगे बढ़ाती है — लोगों, समुदायों और पूरी व्यवस्था के लिए मापनीय परिणाम।",
     pillars: [
       { title: "आर्थिक", points: ["अंतिम छोर पर टिकाऊ आजीविका", "सूक्ष्म-उद्यमियों के लिए अधिक आय", "समुदायों के लिए बेहतर वित्तीय पहुँच"] },
-      { title: "सामाजिक", points: ["मज़बूत सामाजिक पूँजी व विश्वास-नेटवर्क", "जीवन व रोज़गार-कौशल में वृद्धि", "महिलाओं का आर्थिक सशक्तिकरण"] },
+      { title: "सामाजिक", points: ["मज़बूत सामाजिक पूँजी व विश्वास-नेटवर्क", "जीवन व रोज़गार-कौशल में वृद्धि", "समावेशी आर्थिक सशक्तिकरण"] },
       { title: "व्यवस्थागत", points: ["गहरा वित्तीय व स्वास्थ्य समावेशन", "वंचित क्षेत्रों के लिए विस्तार-योग्य ढाँचा", "ज़िला-स्तरीय समन्वय अवसंरचना"] },
     ],
   },
@@ -474,7 +474,7 @@ const hi: Dict = {
       { q: "यह गिग या डिलीवरी प्लेटफ़ॉर्म से कैसे अलग है?", a: "गिग प्लेटफ़ॉर्म लेन-देन के लिए बनते हैं; हम भरोसे और गहराई के लिए बनाते हैं। एक चैंपियन 200–500 परिवारों के साथ कई सेवाओं में दीर्घकालिक रिश्ता रखती है — रिश्ते की पूँजी, न कि एक-बार की डिलीवरी।" },
       { q: "आप भरोसा, निजता और नियामक अनुपालन कैसे बनाए रखते हैं?", a: "डिज़ाइन से। प्लेटफ़ॉर्म भारत की डिजिटल पब्लिक इन्फ़्रास्ट्रक्चर से जुड़ने के लिए बना है, आरबीआई/सेबी/इरडा/जीएसटी नियमों को विन्यास-योग्य नीति के रूप में समाहित करता है, सहमति-प्रबंधन के साथ डीपीडीपी-अनुरूप है, और ऑडिट ट्रेल व वीकेवाईसी जाँच वाली परमिशन्ड-ब्लॉकचेन विश्वास परत का उपयोग करता है।" },
       { q: "बिना इन्वेंट्री या कर्मचारियों के आप पैमाना कैसे बढ़ाते हैं?", a: "एक कम-संपत्ति, हब-एंड-स्पोक मॉडल: एक छोटा केंद्रीय हब, क्षेत्रीय साझेदार जो मौजूदा सामुदायिक नेटवर्क सक्रिय करते हैं, और चैंपियन जो पूँजी नहीं — समय और रिश्ते लगाती हैं। विस्तार से पहले इकाई-अर्थशास्त्र ज़िला-स्तर पर सिद्ध किया जाता है।" },
-      { q: "कल्याण चैंपियन कौन बनता है — और क्या कोई शुल्क है?", a: "भरोसेमंद स्थानीय लोग — ज़्यादातर महिलाएँ — जो आशा व आंगनवाड़ी कार्यकर्ता, महिला सहकारी, हार्टफुलनेस स्वयंसेवक और सेवानिवृत्त सशस्त्र बल जैसे मौजूदा नेटवर्कों से जुड़ती हैं। किसी डिग्री या पूर्व अनुभव की ज़रूरत नहीं। शामिल होने की शुल्क-नीति शीघ्र साझा की जाएगी।" },
+      { q: "कल्याण चैंपियन कौन बनता है — और क्या कोई शुल्क है?", a: "भरोसेमंद स्थानीय लोग, जो अपने समुदाय में बसे हैं — आशा व आंगनवाड़ी कार्यकर्ता, सहकारी समितियाँ, हार्टफुलनेस स्वयंसेवक और सेवानिवृत्त सशस्त्र बल जैसे मौजूदा नेटवर्कों से जुड़ते हैं। किसी डिग्री या पूर्व अनुभव की ज़रूरत नहीं। शामिल होने की शुल्क-नीति शीघ्र साझा की जाएगी।" },
       { q: "हमारा संगठन e2E Reach के साथ कैसे साझेदारी कर सकता है?", a: "एक रणनीतिक साझेदार (ब्रांड, फिनटेक, वित्त, स्वास्थ्य, ऊर्जा, लॉजिस्टिक्स), एक प्रभाव निवेशक, या एक इकोसिस्टम सक्षमकर्ता (तकनीक, प्रशिक्षण, सरकारी कार्यक्रम) के रूप में। बातचीत शुरू करने के लिए information@e2ereach.com पर लिखें।" },
     ],
   },
