@@ -87,7 +87,7 @@ export function SiteNav({
         <a
           href="#top"
           className="rounded-md outline-none focus-visible:ring-2 focus-visible:ring-marigold/60"
-          aria-label="e2E Reach — home"
+          aria-label="e2E Reach, home"
         >
           <Wordmark tone="light" className="text-2xl" />
         </a>
