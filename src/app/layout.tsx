@@ -35,7 +35,7 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
-// Devanagari faces — used automatically (per-glyph fallback) for Hindi text:
+// Devanagari faces, used automatically (per-glyph fallback) for Hindi text:
 // Tiro pairs with Fraunces (display), Mukta with Hanken (body/UI).
 const tiroDevanagari = Tiro_Devanagari_Hindi({
   variable: "--font-tiro",
@@ -53,9 +53,9 @@ const mukta = Mukta({
 });
 
 export const metadata: Metadata = {
-  title: "e2E Reach — Ecosystem commerce for the last mile",
+  title: "e2E Reach, Ecosystem commerce for the last mile",
   description:
-    "Technology democratised information, not access to goods and services. e2E Reach is the trusted human layer that carries commerce, finance, healthcare, energy and government services to the world's underserved communities — starting in India.",
+    "Technology democratised information, not access to goods and services. e2E Reach is the trusted human layer that carries commerce, finance, healthcare, energy and government services to the world's underserved communities, starting in India.",
 };
 
 export default async function RootLayout({

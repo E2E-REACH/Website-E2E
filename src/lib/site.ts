@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "e2E Reach",
   nameExplainer: "e-commerce to Ecosystem",
   tagline: "Ecosystem commerce for India's last mile",
-  contactEmail: "information@e2ereach.com",
+  contactEmail: "hello@e2ereach.com",
   // Platform-first: lead with partnership; the Champion path is secondary.
   ctaPrimary: { label: "Partner with us", href: "#partners" },
   ctaSecondary: { label: "Explore the platform", href: "#platform" },
