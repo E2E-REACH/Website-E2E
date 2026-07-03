@@ -10,15 +10,16 @@
 /*  warm paper carries content, marigold punctuates.                  */
 /* ------------------------------------------------------------------ */
 :root {
-  /* Brand palette */
-  --ground: #16463a;        /* primary deep teal — trust + growth */
-  --ground-deep: #0e2f27;   /* gradient depth / hero base */
-  --ground-light: #1f5e4d;  /* lifted teal for cards on dark */
-  --ground-soft: #dceae3;   /* teal-tinted light surface */
-  --marigold: #e8a33d;      /* accent — energy, India, optimism */
-  --marigold-soft: #f6d9a6; /* soft marigold wash */
-  --marigold-ink: #8f580a;  /* darkened marigold for text on light (AA) */
-  --clay: #b95b3c;          /* secondary accent — very sparing */
+  /* Brand palette — Blue builds the system, Orange activates the people.
+     (Token names kept as ground/marigold; values are the official blue+orange.) */
+  --ground: #143c6e;        /* primary deep blue — trust, institutional credibility */
+  --ground-deep: #0d2a4f;   /* gradient depth / hero base */
+  --ground-light: #1f5f9c;  /* lifted blue for cards on dark + aurora */
+  --ground-soft: #dfeaf7;   /* pale blue-tinted light surface */
+  --marigold: #ee5a24;      /* orange — human energy, hope, the "2"/Champion */
+  --marigold-soft: #fbd8c6; /* soft orange wash */
+  --marigold-ink: #a63c0e;  /* darkened orange for text on light (AA) */
+  --clay: #c24a24;          /* secondary warm accent — very sparing */
   --paper: #fbf8f1;         /* warm off-white content surface */
   --paper-dim: #f1e9d9;     /* subtle alternate surface */
   --ink: #241f1a;           /* primary text */

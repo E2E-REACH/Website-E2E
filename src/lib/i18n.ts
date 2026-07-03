@@ -32,8 +32,8 @@ const en = {
     champion: "Join as a Champion",
   },
   hero: {
-    kickerA: "Ecosystem commerce",
-    kickerB: "the last mile, everywhere",
+    kickerA: "Every End · Every Opportunity",
+    kickerB: "the shortest distance between two humans",
     titleA: "The last mile,",
     titleB: "finally within reach.",
     sub: "Technology democratised information — but not access to goods and services. e2E Reach is the trusted human layer that lets commerce, finance, healthcare, energy and government finally reach the world's underserved communities. Starting in India, built for the world — carried by trusted people the community already knows.",
@@ -59,6 +59,17 @@ const en = {
       { n: "02", title: "We train and equip them", body: "One simple app for many services, hands-on training, payments and ongoing support — no capital needed from them." },
       { n: "03", title: "They carry it to the doorstep", body: "Banking, health, insurance and government schemes — explained face-to-face, in the local language, where people live." },
       { n: "04", title: "Everyone gains", body: "Families get access they never had, Champions earn a real livelihood, and partners finally reach the last mile." },
+    ],
+  },
+  manifesto: {
+    kicker: "Our belief",
+    h: "The world doesn't lack solutions.",
+    hEm: "It lacks connection.",
+    lead: "Every community has two ends — someone who needs, someone who can help. Between them lies a distance no algorithm can close. We close it with trusted people.",
+    contrasts: [
+      { a: "Most build platforms.", b: "We build relationships." },
+      { a: "Most move products.", b: "We move opportunities." },
+      { a: "Most measure transactions.", b: "We measure trust." },
     ],
   },
   gap: {
@@ -247,6 +258,7 @@ const en = {
     explainer:
       "Building the world's trusted last-mile ecosystem for commerce, finance, health and livelihoods — starting in India.",
     tagline: "Ecosystem commerce for the last mile.",
+    brandLine: "Every End. Every Opportunity.",
     explore: "Explore",
     getInTouch: "Get in touch",
     getInTouchNote: "For partnership, investment and ecosystem enablement.",
@@ -275,8 +287,8 @@ const hi: Dict = {
     champion: "चैंपियन के रूप में जुड़ें",
   },
   hero: {
-    kickerA: "इकोसिस्टम कॉमर्स",
-    kickerB: "अंतिम छोर, हर जगह",
+    kickerA: "हर छोर · हर अवसर",
+    kickerB: "दो इंसानों के बीच सबसे छोटी दूरी",
     titleA: "अंतिम छोर,",
     titleB: "अब पहुँच में।",
     sub: "तकनीक ने जानकारी तक पहुँच तो दी — पर वस्तुओं और सेवाओं तक नहीं। e2E Reach वह भरोसेमंद मानवीय परत है जो वाणिज्य, वित्त, स्वास्थ्य, ऊर्जा और सरकारी सेवाओं को दुनिया के वंचित समुदायों तक पहुँचाती है। भारत से शुरुआत, दुनिया के लिए निर्मित — उन भरोसेमंद स्थानीय लोगों के ज़रिए जिन्हें समुदाय पहले से जानता है।",
@@ -302,6 +314,17 @@ const hi: Dict = {
       { n: "02", title: "हम उन्हें प्रशिक्षण और साधन देते हैं", body: "कई सेवाओं के लिए एक सरल ऐप, व्यावहारिक प्रशिक्षण, भुगतान और निरंतर सहयोग — उन्हें कोई पूँजी नहीं लगानी पड़ती।" },
       { n: "03", title: "वे इसे घर के दरवाज़े तक लाते हैं", body: "बैंकिंग, स्वास्थ्य, बीमा और सरकारी योजनाएँ — आमने-सामने, स्थानीय भाषा में, वहीं जहाँ लोग रहते हैं।" },
       { n: "04", title: "सबको लाभ होता है", body: "परिवारों को वह पहुँच मिलती है जो पहले कभी नहीं थी, चैंपियनों को सच्ची आजीविका मिलती है, और साझेदार अंततः अंतिम छोर तक पहुँचते हैं।" },
+    ],
+  },
+  manifesto: {
+    kicker: "हमारा विश्वास",
+    h: "दुनिया में समाधानों की कमी नहीं।",
+    hEm: "कमी है जुड़ाव की।",
+    lead: "हर समुदाय के दो छोर होते हैं — किसी को ज़रूरत, कोई मदद कर सकता है। इनके बीच एक दूरी है जिसे कोई एल्गोरिदम नहीं पाट सकता। उसे हम भरोसेमंद लोगों से पाटते हैं।",
+    contrasts: [
+      { a: "अधिकांश प्लेटफ़ॉर्म बनाते हैं।", b: "हम रिश्ते बनाते हैं।" },
+      { a: "अधिकांश उत्पाद पहुँचाते हैं।", b: "हम अवसर पहुँचाते हैं।" },
+      { a: "अधिकांश लेन-देन गिनते हैं।", b: "हम भरोसा मापते हैं।" },
     ],
   },
   gap: {
@@ -490,6 +513,7 @@ const hi: Dict = {
     explainer:
       "वाणिज्य, वित्त, स्वास्थ्य और आजीविका के लिए दुनिया का भरोसेमंद अंतिम-छोर इकोसिस्टम बना रहे हैं — भारत से शुरुआत।",
     tagline: "अंतिम छोर के लिए इकोसिस्टम कॉमर्स।",
+    brandLine: "हर छोर। हर अवसर।",
     explore: "देखें",
     getInTouch: "संपर्क करें",
     getInTouchNote: "साझेदारी, निवेश और इकोसिस्टम सक्षमता के लिए।",

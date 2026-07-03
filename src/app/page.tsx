@@ -1,6 +1,7 @@
 import { getDict } from "@/lib/locale";
 import { SiteNav } from "@/components/sections/site-nav";
 import { Hero } from "@/components/sections/hero";
+import { Manifesto } from "@/components/sections/manifesto";
 import { HowOnGround } from "@/components/sections/how-on-ground";
 import { TheGap } from "@/components/sections/the-gap";
 import { HowItWorks } from "@/components/sections/how-it-works";
@@ -24,6 +25,7 @@ export default async function Home() {
       <SiteNav locale={locale} nav={t.nav} cta={t.cta} langName={t.langName} langSwitchLabel={t.langSwitchLabel} />
       <main className="flex-1">
         <Hero t={t.hero} cta={t.cta} />
+        <Manifesto t={t.manifesto} />
         <HowOnGround t={t.how} />
         <TheGap t={t.gap} />
         <HowItWorks t={t.platform} />

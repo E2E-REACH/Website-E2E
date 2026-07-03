@@ -25,10 +25,10 @@ export function SiteFooter({
       <div className="mx-auto grid w-full max-w-[88rem] grid-cols-1 gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
         <div className="max-w-sm">
           <Wordmark tone="light" className="text-2xl" />
-          <p className="mt-5 text-sm leading-relaxed text-paper/65">{t.explainer}</p>
-          <p className="mt-5 font-display text-lg italic text-paper/80">
-            {t.tagline}
+          <p className="mt-5 font-display text-xl italic text-paper">
+            {t.brandLine}
           </p>
+          <p className="mt-4 text-sm leading-relaxed text-paper/65">{t.explainer}</p>
         </div>
 
         <nav aria-label="Footer">
