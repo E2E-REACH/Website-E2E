@@ -4,7 +4,8 @@ export const siteConfig = {
   tagline: "Ecosystem commerce for India's last mile",
   contactEmail: "hello@e2ereach.com",
   // Platform-first: lead with partnership; the Champion path is secondary.
-  ctaPrimary: { label: "Partner with us", href: "#partners" },
+  // "Partner with us" sends people into the WBC portal (app.e2ereach.com).
+  ctaPrimary: { label: "Partner with us", href: "https://app.e2ereach.com" },
   ctaSecondary: { label: "Explore the platform", href: "#platform" },
   ctaChampion: { label: "Join as a Champion", href: "#contact" },
   nav: [
